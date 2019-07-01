@@ -1,832 +1,226 @@
-<!DOCTYPE HTML>
-<!--suppress ALL -->
-<html class="no-js" lang="zh-cmn-Hans">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta charset="UTF-8">
-    <!--IE 8浏览器的页面渲染方式-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <!--默认使用极速内核：针对国内浏览器产商-->
-    <meta name="renderer" content="webkit">
-    <!--chrome Android 地址栏颜色-->
-        <meta name="theme-color" content="#3a3f51" />
+<html>
+
+	<head>
+
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<title>陌上花开缓缓归</title>
+
+		<style type="text/css">
+			body {
+				background: #090d00;
+			}
+			.text {
+				font: 400 0.6em/1.5 "Neuton"; 
+				color: rgba(255,255,255,.25);
+				text-align: center;
+			}
+			.text p {
+				color: #848484;
+				text-transform: uppercase;
+				letter-spacing: .5em;
+				display: inline-block;
+				border: 4px double rgba(255,255,255,.25);
+				border-width: 4px 0;
+				padding: 1.5em 0em;
+				position: absolute;
+				top: 18%;
+				left: 50%;
+				width: 40em;
+				margin: 0 0 0 -20em;
+			}
+			.text p span {
+				font: 700 4em/1 "Oswald", sans-serif;
+				letter-spacing: 0;
+				padding: .25em 0 .325em;
+				display: block;
+				margin: 0 auto;
+				text-shadow: 0 0 80px rgba(255,255,255,.5);
+				background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				-webkit-animation: aitf 80s linear infinite;
+				-webkit-transform: translate3d(0,0,0);
+				-webkit-backface-visibility: hidden;
+			}
+			@-webkit-keyframes aitf {
+				0% {
+					background-position: 0% 50%;
+				}
+				100% {
+					background-position: 100% 50%;
+				}
+			}
+			/* COMMON CLASSES */
+			.break { clear:both; }
+			/* WRAPPER */
+			#wrapper { width:800px; margin:40px auto; }
+			/* CONTENT */
+			#content { }
+			#content h2 { font: bold 30px Helvetica, Arial, Sans-serif; color:#eee; text-shadow: 0px 2px 6px #333; margin-left:400px; padding-top:20px; }
+			/* BAR CHART */
+			#bar { list-style:none;	}
+			#bar li { }
+			/* Last bottom should have a shadow */
+			#bar li div.bottom { -moz-box-shadow: 0 10px 10px hsla(0,0%,0%,.2); -webkit-box-shadow: 0 10px 30px hsla(0,0%,0%,.2); box-shadow: 0 10px 30px hsla(0,0%,0%,.2); }
+			/* Ellipse top */
+			#bar li div.top { background-color:rgba(213,238,241,0.5); position:relative; float:left; margin-left:10px;
+				width:40px; height:100px; -moz-border-radius: 40px/100px; -webkit-border-radius: 40px 100px; border-radius: 40px/100px;
+				-webkit-transition-property: margin-left;
+				-webkit-transition-duration: 500ms;
+			}
+			#bar li div.top img { margin-left:10px; margin-top:15px; }
+			#bar li div.top h3 { color: white; }
+			/* Bar bottom */
+			#bar li div.bottom { position:relative; margin:5px 0; width:50px;
+				height:100px; -moz-border-radius: 40px/100px; -webkit-border-radius: 40px 100px; border-radius: 40px/100px;
+				background:-moz-linear-gradient(-90deg, #97a7a9, #b8cbcd); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#97a7a9), to(#b8cbcd));
+				-webkit-transition-property: width;
+				-webkit-transition-duration: 500ms;
+			}
+			#bar li div.bottom div.infobox { padding:40px 0 0 600px;
+				-webkit-transition-property: color;
+				-webkit-transition-duration: 500ms;
+			}
+			#bar li div.bottom div.infobox h3 { font-family:Georgia,serif,Times;}
+			#bar li div.bottom div.infobox p { font-family:"Lucida Grande",Arial,Helvetica,Sans-Serif; opacity: 0; font-size: 30;
+				-webkit-transition-property: opacity;
+				-webkit-transition-duration: 500ms;
+			}
+			/* General hover actions */
+			#bar li:hover div.bottom div.infobox { color:#eee; text-shadow: 0px 5px 5px #111; }
+			#bar li:hover div.bottom div.infobox p { opacity:1; }
+			#html div.top { z-index:99; }
+			#html div.bottom { z-index:98; height:150px; }
+			#html:hover div.top { z-index:999; background-color:#FE9A2E; margin-left:320px; }
+			#html:hover div.bottom { z-index:998; background-color:#FE9A2E; width:360px;
+				background:-moz-linear-gradient(-90deg, #FE9A2E, #FE9A2E); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#FE9A2E), to(#FE9A2E)); }
+			#css div.top { z-index:97; }
+			#css div.bottom { z-index:96; height:200px; }
+			#css:hover div.top { z-index:997; background-color:#0174DF; margin-left:200px; }
+			#css:hover div.bottom { z-index:996; background-color:#0174DF; width:240px;
+				background:-moz-linear-gradient(-90deg, #0174DF, #0174DF); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#0174DF), to(#0174DF)); }
+			#js div.top { z-index:95; }
+			#js div.bottom { z-index:94; height:250px; }
+			#js:hover div.top { z-index:995; background-color:#F4FA58; margin-left:390px; }
+			#js:hover div.bottom { z-index:994; background-color:#F4FA58; width:430px;
+				background:-moz-linear-gradient(-90deg, #F4FA58, #F4FA58); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#F4FA58), to(#F4FA58)); }
+			#lua div.top { z-index:93; }
+			#lua div.bottom { z-index:92; height:100px; }
+			#lua:hover div.top { z-index:993; background-color:#013ADF; margin-left:160px; }
+			#lua:hover div.bottom { z-index:992; background-color:#013ADF; width:200px;
+				background:-moz-linear-gradient(-90deg, #013ADF, #013ADF); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#013ADF), to(#013ADF)); }
+			.link-1 a {
+				display: block;
+				color: #848484;
+				text-decoration: none;
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%);
+			}
+			.link-1 a::after{
+				content: "";
+				background: white;
+				mix-blend-mode: exclusion;
+				width: calc(100% + 20px);
+				height: 0;
+				position: absolute;
+				bottom: -4px;
+				left: -10px;
+				transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			}
+			.link-1 a:hover::after{
+				height: calc(100% + 8px)
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="text">
+
+			<p>
+
+				Love
+
+				<span>
+
+					陌上花开缓缓归
+
+				</span>
+
+				 What a wonderful world 
+
+			</p>
+
+		</div>
+
+    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    	<center>
+    		<font color="#848484" size="5">
+
+
+
+	
+       <img src="gangbi.png"width=35% height=80%>
+
+			
+<width=60% height=100%>
+	</p>
+        <p>
+				              <h1>美文鉴赏</h1>         
+
+	</p>
+        <p>
+	
+
+	                                     《生命的短暂》
+
+       </p>
+       <p>
+	那是一个阳光明媚、风和日丽的早晨。我和妈妈来到菜场，菜场的东西可真是琳琅满目！在水产区我一眼就挑中了一只金鱼，肥肥的，真可爱。可一想到一只金鱼太孤单，正当我不知道该怎么选择时，热情的老板似乎看透了我的心思，对我说：“小朋友，我们这有一只眼睛瞎的金鱼，也卖不出去，干脆送给你得了！”我高心极了，急忙点头。就这样，两条金鱼被我带回了家。
+
+ 回到家，我急忙把金鱼们放进了鱼缸，就准备喂食。可是，我扔了5颗鱼食进去，居然都被那条肥金鱼吃了。而眼睛看不见的那只金鱼却一颗也没有吃到。因此我给你取了个名字——“小不点”。从那天以后，我都会非常细心的照顾你。给你喂食、陪你玩耍……那是一个炎热的中午，我放学后，以刘翔一样快的速度跑回了家。把鱼食放在棍子上，放在你的面前。你昂起头，似乎察觉到了什么。我把棍子往前移，你就往前移，我把棍子往后移，你也往后移。终于，你使劲咬，咬住了鱼食，美滋滋地吃了起来。那天，我和你渡过了一个美好的中午。你的嗅觉也渐渐地提高了！
     
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-
-    <title>萌咖 | MoeClub.org</title>
-            <link rel="icon" type="image/ico" href="/favicon.ico">
-        <meta name="description" content="一次擦肩而过就可能再也就不到了哦!" />
-<meta name="keywords" content="萌咖,免费资源,活动资源,影视资源,脚本资源,技术分享,技巧展示,一键脚本,离线下载,二次元" />
-<meta name="generator" content="Typecho 1.1/17.10.30" />
-<meta name="template" content="handsome" />
-<link rel="alternate" type="application/rss+xml" title="萌咖 &raquo; RSS 2.0" href="https://moeclub.org/feed/" />
-<link rel="alternate" type="application/rdf+xml" title="萌咖 &raquo; RSS 1.0" href="https://moeclub.org/feed/rss/" />
-<link rel="alternate" type="application/atom+xml" title="萌咖 &raquo; ATOM 1.0" href="https://moeclub.org/feed/atom/" />
-
-        <!-- 第三方CDN加载CSS -->
-        <link href="https://moeclub.org/usr/themes/handsome/assets/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- 本地css静态资源 -->
-    <link rel="stylesheet" href="https://moeclub.org/usr/themes/handsome/assets/css/function.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://moeclub.org/usr/themes/handsome/assets/css/handsome.min.css" type="text/css" />
-
-
-
-    <!--主题组件css文件加载-->
-    <link rel="stylesheet" href="https://moeclub.org/usr/themes/handsome/assets/css/features/jquery.fancybox.min.css" type="text/css" />
-            <link rel="stylesheet" href="https://moeclub.org/usr/themes/handsome/assets/css/features/code/zenburn.min.css" type="text/css" />
+    3月28日，是我的十岁生日。我把你一起带进了饭馆。吃完饭后，我把你放在酒店的大盆子里。你活蹦乱跳的在盆里游呀游，那样子可真讨人喜欢。就在这时，你突然昂起头来，不停地跳舞，好像在为我唱着生日歌，我非常高兴，喂你了几颗鱼食。你好像也明白了我的谢意，不停地摆动着身体，仿佛在说：“谢谢你，小主人，我太爱你啦！”生日那天我过的非常开心，因为有了你的陪伴。
     
-    <!--引入英文字体文件-->
-        <link rel="stylesheet" href="https://moeclub.org/usr/themes/handsome/assets/css/font.min.css" type="text/css" />
+    可是，就在我生日后的一个星期。你走了，顿时，我的心就如刀绞一般。我拼命地摇晃着你，可你依然一动不动。你就这样离开了我，让我的生活也少了几分色彩…….
     
-    <style type="text/css">
-        
-        html.bg {
-                   background-image:
-               -moz-radial-gradient(-20% 140%, ellipse ,  rgba(143,192,193,.6) 30%,rgba(255,255,227,0) 50%),
-               -moz-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
-               -moz-linear-gradient(-45deg,  rgba(143,181,158,.8) -10%,rgba(213,232,211,.8) 80% )
-           ;
-           background-image:
-               -o-radial-gradient(-20% 140%, ellipse ,  rgba(143,192,193,.6) 30%,rgba(255,255,227,0) 50%),
-               -o-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
-               -o-linear-gradient(-45deg,  rgba(143,181,158,.8) -10%,rgba(213,232,211,.8) 80% )
-           ;
-           background-image:
-               -ms-radial-gradient(-20% 140%, ellipse ,  rgba(143,192,193,.6) 30%,rgba(255,255,227,0) 50%),
-               -ms-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
-               -ms-linear-gradient(-45deg,  rgba(143,181,158,.8) -10%,rgba(213,232,211,.8) 80% )
-           ;
-           background-image:
-               -webkit-radial-gradient(-20% 140%, ellipse ,  rgba(143,192,193,.6) 30%,rgba(255,255,227,0) 50%),
-               -webkit-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
-               -webkit-linear-gradient(-45deg,  rgba(143,181,158,.8) -10%,rgba(213,232,211,.8) 80% )
-               ;
-        }
-        .cool-transparent .off-screen+* .app-content-body {
-                   background-image:
-               -moz-radial-gradient(-20% 140%, ellipse ,  rgba(143,192,193,.6) 30%,rgba(255,255,227,0) 50%),
-               -moz-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
-               -moz-linear-gradient(-45deg,  rgba(143,181,158,.8) -10%,rgba(213,232,211,.8) 80% )
-           ;
-           background-image:
-               -o-radial-gradient(-20% 140%, ellipse ,  rgba(143,192,193,.6) 30%,rgba(255,255,227,0) 50%),
-               -o-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
-               -o-linear-gradient(-45deg,  rgba(143,181,158,.8) -10%,rgba(213,232,211,.8) 80% )
-           ;
-           background-image:
-               -ms-radial-gradient(-20% 140%, ellipse ,  rgba(143,192,193,.6) 30%,rgba(255,255,227,0) 50%),
-               -ms-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
-               -ms-linear-gradient(-45deg,  rgba(143,181,158,.8) -10%,rgba(213,232,211,.8) 80% )
-           ;
-           background-image:
-               -webkit-radial-gradient(-20% 140%, ellipse ,  rgba(143,192,193,.6) 30%,rgba(255,255,227,0) 50%),
-               -webkit-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
-               -webkit-linear-gradient(-45deg,  rgba(143,181,158,.8) -10%,rgba(213,232,211,.8) 80% )
-               ;
-        }    </style>
+    从你离开我的那一刻，我明白了，生命是短暂的，是金钱也买不回来的。所以，我要对大家说：“生命是宝贵的，我们要爱惜生命！     
+       </p>
+       <p>
+    <hr style=" width:20%; display:inline-block" />
+			
+			
+</p>
+<p>			
+<textarea rows="10" cols="100">
+最新
 
-    <!--全站jquery-->
-    <script src="https://moeclub.org/usr/themes/handsome/assets/js/jquery.min.js"></script>
+</textarea>
+</p>
+<p	
 
-    <!--网站统计代码-->
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</head>
+	
 
-<body id="body">
+				</ul>
 
+			</div>
 
-  <!-- aside -->
-    
-  <div id="alllayout" class="app app-aside-fixed app-header-fixed ">  <!-- headnav -->
-      <header id="header" class="app-header navbar" role="menu">
-      <!-- navbar header（交集处） -->
-        <div class="navbar-header bg-dark">
-        <button class="pull-right visible-xs dk" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
-          <i class="fontello fontello-gear text-lg"></i>
-        </button>
-        <button class="pull-left visible-xs" ui-toggle-class="off-screen animated" target=".app-aside" ui-scroll="app">
-          <i class="fontello fontello-menu text-lg"></i>
-        </button>
-        <!-- brand -->
-        <a href="https://moeclub.org/" class="navbar-brand text-lt">
-                                                <i class="fontello fontello-home"></i>
-                                                    <span class="hidden-folded m-l-xs">萌咖</span>
-                                    </a>
-        <!-- / brand -->
-      </div>
-      <!-- / navbar header -->
+		</div>
 
-      <!-- navbar collapse（顶部导航栏） -->
-    <div class="collapse pos-rlt navbar-collapse box-shadow bg-dark">        <!-- buttons -->
-        <div class="nav navbar-nav hidden-xs">
-          <a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="app-aside-folded" target=".app">
-            <i class="fontello fontello-dedent text icon-fw"></i>
-            <i class="fontello fontello-indent icon-fw text-active"></i>
-          </a>
+		<center>
 
-        </div>
-        <!-- / buttons -->
+			<div class="link-1">
 
+				<font size="6"><a href="https://fucao.js.org">Fucao</font>
 
-        <!-- search form -->
-        <form id="searchform1" class="searchform navbar-form navbar-form-sm navbar-left shift" method="post"
-              role="search">
-          <div class="form-group">
-            <div class="input-group rounded bg-light">
-              <input autocomplete="off" id="search_input" type="search" name="s" class="transparent rounded form-control input-sm no-border padder" required placeholder="输入关键词搜索…">
-                <!--搜索提示-->
-                <ul id="search_tips_drop" class="dropdown-menu hide" style="display: block;top: 30px; left: 0px;">
-                </ul>
-              <span id="search_submit" class="transparent input-group-btn">
-                  <button  type="submit" class="transparent btn btn-sm"><i class="fontello fontello-search"></i></button>
-              </span>
-            </div>
-          </div>
-        </form>
-          <a href="" style="display: none" id="searchUrl"></a>
-        <!-- / search form -->
-                <ul class="nav navbar-nav navbar-right">
-                                  <!--闲言碎语-->
-          <li class="dropdown">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-              <i class="fontello fontello-bell icon-fw"></i>
-              <span class="visible-xs-inline">
-              闲言碎语              </span>
-              <span class="badge badge-sm up bg-danger pull-right-xs"></span>
-            </a>
-            <!-- dropdown -->
-            <div class="dropdown-menu w-xl animated fadeInUp">
-              <div class="panel bg-white">
-                <div class="panel-heading b-light bg-light">
-                  <strong>
-              闲言碎语                  </strong>
-                </div>
-                <div class="list-group" id="smallRecording">
-                  <a href="https://moeclub.org/about.html" class="list-group-item"><span class="clear block m-b-none">如果你看到这条动态，请去后台新建独立页面，地址填写about,自定义模板选择时光机。具体说明请参见主题的使用攻略。<br><small class="text-muted">July 1st, 2019 a	 10:27 am</small></span></a>                </div>
-              </div>
-            </div>
-          </li>
-          <!--/闲言碎语-->
-                                </ul>
-      </div>
-      <!-- / navbar collapse -->
-  </header>
-  <!-- / headnav -->
+			</div>
 
-  <!--选择侧边栏的颜色-->
-  <aside id="aside" class="app-aside hidden-xs bg-light">  <!--<aside>-->
-      <div class="aside-wrap" layout="column">
-        <div class="navi-wrap scroll-y" flex>
-          <!-- user -->
-          <div class="clearfix hidden-xs text-center hide  show" id="aside-user">
-            <div class="dropdown wrapper">
-                <div ui-nav>
-                          <a href="https://moeclub.org/about">
-                            <span class="thumb-lg w-auto-folded avatar m-t-sm">
-                  <img src="https://moeclub.org/usr/themes/handsome/assets/img/avatar.png" class="img-full">
-                </span>
-              </a>
-                </div>
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
-                <span class="clear">
-                  <span class="block m-t-sm">
-                    <strong class="font-bold text-lt">Haibara</strong>
-                    <b class="caret"></b>
-                  </span>
-                  <span class="text-muted text-xs block"></span>
-                </span>
-              </a>
-              <!-- dropdown -->
-              <ul class="dropdown-menu animated fadeInRight w hidden-folded no-padder">
-                <li class="wrapper b-b m-b-sm bg-info m-n">
-                  <span class="arrow top hidden-folded arrow-info"></span>
-                  <div>
-                                                  <p>早上好，永远年轻，永远热泪盈眶</p>
-                                  </div>
-                  <div class="progress progress-xs m-b-none dker">
-                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过41.67%" style="width: 41.67%"></div>
-                  </div>
-                </li>
-              </ul>
-              <!-- / dropdown -->
-            </div>
-              <div class="line dk hidden-folded"></div>
-          </div>
-          <!-- / user -->
+		</center>
 
-          <!-- nav -->
-          <nav ui-nav class="navi clearfix">
-            <ul class="nav">
-             <!--index-->
-                                          <!--主页-->
-              <li>
-                <a href="https://moeclub.org/" class="auto">
-                  <i class="iconfont icon-zhuye icon text-md"></i>
-                  <span>首页</span>
-                </a>
-              </li>
-                              <li><a href="https://shop.moeclub.org/" class="auto"><i class="iconfont icon-star icon text-md"></i><span>商店</span></a></li>
-<li><a href="https://moeclub.org/onedrive" class="auto"><i class="iconfont icon-pages icon text-md"></i><span>仓库</span></a></li>
-                            <!-- /主页 -->
-                                                          <li class="line dk"></li>
-              <!--Components-->
-              <!--分类category-->
-              <li>
-                <a class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fontello icon-fw fontello-angle-right text"></i>
-                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
-                  </span>
-                  <i class="glyphicon glyphicon-th"></i>
-                  <span>分类</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a>
-                      <span>分类</span>
-                    </a>
-                  </li>
-                  <!--循环输出分类-->
-                    <li><a href="https://moeclub.org/category/technology/"><b class="badge pull-right">98</b><span>Technology</span></a></li><li><a href="https://moeclub.org/category/moe/"><b class="badge pull-right">2</b><span>Moe</span></a></li><li><a href="https://moeclub.org/category/tricks/"><b class="badge pull-right">19</b><span>Tricks</span></a></li><li><a href="https://moeclub.org/category/windows/"><b class="badge pull-right">32</b><span>Windows</span></a></li><li><a href="https://moeclub.org/category/vps/"><b class="badge pull-right">10</b><span>VPS</span></a></li>                </ul>
-              </li>
-              <!--独立页面pages-->
-              <li>
-                <a class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fontello icon-fw fontello-angle-right text"></i>
-                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
-                  </span>
-                  <i class="glyphicon glyphicon-file"></i>
-                  <span>页面</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a data-no-instant>
-                      <span>页面</span>
-                    </a>
-                  </li><!--这个字段不会被显示出来-->
-                  <!--循环输出独立页面-->
-                                                                                   <li><a href="https://moeclub.org/go-lookup"><span>LookUp</span></a></li>
-                                                                 <li><a href="https://moeclub.org/api"><span>API 接口</span></a></li>
-                                                                 <li><a href="https://moeclub.org/readmail"><span>临时邮箱</span></a></li>
-                                                                 <li><a href="https://moeclub.org/directlink"><span>网盘直链</span></a></li>
-                                                                 <li><a href="https://moeclub.org/kms"><span>KMS激活</span></a></li>
-                                   </ul>
-              </li>
-              <!--友情链接-->
-              <li>
-                <a class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fontello icon-fw fontello-angle-right text"></i>
-                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
-                  </span>
-                  <i class="iconfont icon-links"></i>
-                  <span>友链</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a data-no-instant>
-                      <span>友链</span>
-                    </a>
-                  </li>
-                  <!--使用links插件，输出全站友链-->
-                 <li data-original-title="做人不装逼，和咸鱼有什么区别" data-toggle="tooltip" 
-data-placement="top"><a href="https://moehu.org/?from=https://moeclub.org" target="_blank"><span>萌虎</span></a></li><li data-original-title="活在当下，珍惜眼前人。" data-toggle="tooltip" 
-data-placement="top"><a href="https://www.moerats.com/?from=https://moeclub.org" target="_blank"><span>萌鼠</span></a></li><li data-original-title="You are the one I have been looking for." data-toggle="tooltip" 
-data-placement="top"><a href="https://www.helingqi.com/?from=https://moeclub.org" target="_blank"><span>禾令奇</span></a></li><li data-original-title="分享是一种美德，是一种态度。" data-toggle="tooltip" 
-data-placement="top"><a href="http://51.ruyo.net/?from=https://moeclub.org" target="_blank"><span>如有乐享</span></a></li><li data-original-title="一个专业推荐全球各地VPS的辣鸡AFF推荐网." data-toggle="tooltip" 
-data-placement="top"><a href="https://www.vpstry.com/?from=https://moeclub.org" target="_blank"><span>VPS推荐</span></a></li>                </ul>
-              </li>
-                            </ul>
-          </nav>
-          <!-- nav -->
-        </div>
-          <!--end of .navi-wrap-->
-          <!--left_footer-->
-          <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
-                  
-                                              </div>
-
-      </div><!--.aside-wrap-->
-  </aside>
-<!-- content -->
-<div id="content" class="app-content">
-    <!--loading animate-->
-    <div id="loading" class="butterbar active hide">
-            <span class="bar"></span>
-        </div>  <!-- / aside -->
-
-<!-- <div id="content" class="app-content"> -->
-  <a class="off-screen-toggle hide"></a>
-  <main class="app-content-body ">
-    <div class="hbox hbox-auto-xs hbox-auto-sm">
-      <div class="col center-part">
-                  <header class="bg-light lter b-b wrapper-md">
-          <h1 class="m-n font-thin h3 text-black l-h"></h1>
-          <small class="text-muted letterspacing indexWords">
-              一次擦肩而过可能就再也见不到了哦!          </small>
-          </header>
-        <div class="wrapper-md" id="post-panel">
-            <!--首页输出文章-->
-                        <div class="blog-post"><div class="panel"><div class="post-meta wrapper-lg">
-    <h2 class="m-t-none index-post-title"><a href="https://moeclub.org/2018/10/31/670/"><span class="label text-base bg-danger pull-left m-t-xs m-r-xs" style="margin-top:  2px;">置顶</span>[ Windows VPS ] Windows 一键重装系统为 Linux (netboot,网络安装)</a></h2><p class="summary l-h-2x text-muted">有些厂商的机器因策略问题,不支持Windows重装为Linux. 例如: 腾讯云非大陆区域.
-有些厂商Windows系统盘会比Linux系统盘大,想要大一点系统盘. 例如: AZURE, AWS等.
-有些厂商不支持VNC,这对于转换系统实在不方便.
-...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon">
-<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://moeclub.org/author/1/">Haibara&nbsp;</a></span>
-
-<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2018 年 10 月 31 日</span><a href="https://moeclub.org/2018/10/31/670/#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;29 条评论</a></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel"><div class="post-meta wrapper-lg">
-    <h2 class="m-t-none index-post-title"><a href="https://moeclub.org/2018/04/03/603/"><span class="label text-base bg-danger pull-left m-t-xs m-r-xs" style="margin-top:  2px;">置顶</span>[ Linux VPS ] Debian/Ubuntu/CentOS 网络安装/网络重装/纯净安装 一键脚本</a></h2><p class="summary l-h-2x text-muted">
-背景:
-适用于由GRUB引导的CentOS,Ubuntu,Debian系统.使用官方发行版去掉模板预装的软件.同时也可以解决内核版本与软件不兼容的问题。只要有root权限,还您一个纯净的系统。
-相关文章:
-[ Linux Shell ] 通...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon">
-<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://moeclub.org/author/1/">Haibara&nbsp;</a></span>
-
-<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2018 年 04 月 03 日</span><a href="https://moeclub.org/2018/04/03/603/#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;133 条评论</a></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel"><div class="post-meta wrapper-lg">
-    <h2 class="m-t-none index-post-title"><a href="https://moeclub.org/2017/11/19/483/"><span class="label text-base bg-danger pull-left m-t-xs m-r-xs" style="margin-top:  2px;">置顶</span>[ Linux Shell ] 通用无限制在 Linux VPS 上一键全自动 dd 安装 Windows 系统</a></h2><p class="summary l-h-2x text-muted">无限制全自动dd安装Windows
-突破没有VNC,没有救援模式,内存比dd包小的限制.
-使用Debian Live CD中的busybox做中间媒介,经过复杂的处理,
-使本机的网络参数传进Windows操作系统中,
-即使没有DHCP能够让Windo...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon">
-<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://moeclub.org/author/1/">Haibara&nbsp;</a></span>
-
-<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2017 年 11 月 19 日</span><a href="https://moeclub.org/2017/11/19/483/#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;218 条评论</a></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel"><div class="post-meta wrapper-lg">
-    <h2 class="m-t-none index-post-title"><a href="https://moeclub.org/2017/03/09/14/"><span class="label text-base bg-danger pull-left m-t-xs m-r-xs" style="margin-top:  2px;">置顶</span>[lotServer] [serverSpeeder] [锐速] 安装</a></h2><p class="summary l-h-2x text-muted">Update: 2019.04.15
-* 支持更高版本的内核.
------
-说明:
-支持一键完全卸载(此脚本安装的无残留).
-所需文件均在GitHub,完全公开..
-不支持自动更换内核,请自行更换.
-
-Debian/Ubuntu用户可以使用...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon">
-<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://moeclub.org/author/1/">Haibara&nbsp;</a></span>
-
-<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2017 年 03 月 09 日</span><a href="https://moeclub.org/2017/03/09/14/#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;119 条评论</a></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel"><div class="post-meta wrapper-lg">
-    <h2 class="m-t-none index-post-title"><a href="https://moeclub.org/2016/08/08/644/"><span class="label text-base bg-danger pull-left m-t-xs m-r-xs" style="margin-top:  2px;">置顶</span>[ 福利 ] 不定时不定量发放</a></h2><p class="summary l-h-2x text-muted">不定时发放各种福利~
-如果没能领到福利,不要灰心~</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon">
-<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://moeclub.org/author/1/">Haibara&nbsp;</a></span>
-
-<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2016 年 08 月 08 日</span><a href="https://moeclub.org/2016/08/08/644/#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;62 条评论</a></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel"><div class="post-meta wrapper-lg">
-    <h2 class="m-t-none index-post-title"><a href="https://moeclub.org/2019/03/06/741/">[PowerShell] 升级 Win7/Win8/Server 2008 R2/Server 2012/Server 2012 R2 中自带的PowerShell版本</a></h2><p class="summary l-h-2x text-muted">因为有些ps1脚本(PowerShell)很强大,但是只能在较高版本的PowerShell上才能正常运行.
-升级很简单,只需要下载对应的补丁包和安装 .Net 4.5.2 即可.
-安装 .Net 4.5.2 全量包.
-注意: 安装期间可能会要求打...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon">
-<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://moeclub.org/author/1/">Haibara&nbsp;</a></span>
-
-<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2019 年 03 月 06 日</span><a href="https://moeclub.org/2019/03/06/741/#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;暂无评论</a></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel"><div class="post-meta wrapper-lg">
-    <h2 class="m-t-none index-post-title"><a href="https://moeclub.org/2019/01/21/733/">[Python] 在 Debian/Ubuntu 上安装 lxml 模块正确方法</a></h2><p class="summary l-h-2x text-muted">需要一些依赖，依赖不全装不上。#编译所需依赖
-apt-get install -y python-pip python-dev python3-pip python3-dev libxml2-dev libxslt-dev zlib1g-dev
-...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon">
-<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://moeclub.org/author/1/">Haibara&nbsp;</a></span>
-
-<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2019 年 01 月 21 日</span><a href="https://moeclub.org/2019/01/21/733/#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;暂无评论</a></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel"><div class="post-meta wrapper-lg">
-    <h2 class="m-t-none index-post-title"><a href="https://moeclub.org/2019/01/18/730/">[PowerShell] 无需全局管理员权限查看 Office365 组织内的订阅属性(订阅日期,许可证,全局管理员状态等)</a></h2><p class="summary l-h-2x text-muted">此工具用于查询Office365订阅(许可证)状态。
-无需管理员权限即可查看Office365组织内的订阅属性以及全局管理员的状态。
-比如: 验证该Office365组织的全局管理员账户是否翻车(被禁止登陆)/是否存在.
-广告: 可到 萌咖 杂货店 ...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon">
-<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://moeclub.org/author/1/">Haibara&nbsp;</a></span>
-
-<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2019 年 01 月 18 日</span><a href="https://moeclub.org/2019/01/18/730/#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;7 条评论</a></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel"><div class="post-meta wrapper-lg">
-    <h2 class="m-t-none index-post-title"><a href="https://moeclub.org/2018/12/09/722/">[ 科普 ] Microsoft Office365 A1/A1P/E3 MSDN/E3 Trial 区别以及风险</a></h2><p class="summary l-h-2x text-muted">很多人都不知道 Microsoft Office365 A1/A1P/E3 MSDN/E3 Trial 的区别, 说明一下.</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon">
-<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://moeclub.org/author/1/">Haibara&nbsp;</a></span>
-
-<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2018 年 12 月 09 日</span><a href="https://moeclub.org/2018/12/09/722/#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;6 条评论</a></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel"><div class="post-meta wrapper-lg">
-    <h2 class="m-t-none index-post-title"><a href="https://moeclub.org/2018/12/05/717/">[教程] Microsoft Office365 E3 MSDN 25用户 修改预设 OneDrive 存储空间大小方法</a></h2><p class="summary l-h-2x text-muted">说明：Microsoft Office365 中的 OneDrive for Business 存储空间默认是每用户1T储存空间, 包括全局管理员. 虽然我们可以直接在面板设置存储空间大小为5T. 但是由于已经存在的用户包括全局管理员都是无法直接修改...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon">
-<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://moeclub.org/author/1/">Haibara&nbsp;</a></span>
-
-<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2018 年 12 月 05 日</span><a href="https://moeclub.org/2018/12/05/717/#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;14 条评论</a></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-</div>          <!--分页首页按钮-->
-          <nav class="text-center m-t-lg m-b-lg" role="navigation">
-        <ol class="page-navigator"><li class="current"><a href="https://moeclub.org/page/1/">1</a></li><li><a href="https://moeclub.org/page/2/">2</a></li><li><a href="https://moeclub.org/page/3/">3</a></li><li><a href="https://moeclub.org/page/4/">4</a></li><li><span>...</span></li><li><a href="https://moeclub.org/page/28/">28</a></li><li class="next"><a href="https://moeclub.org/page/2/"><i class="fontello fontello-chevron-right"></i></a></li></ol>          </nav>
-            <style>
-                .page-navigator>li>a, .page-navigator>li>span{
-                    line-height: 1.42857143;
-                    padding: 6px 12px;
-                }
-            </style>
-        </div>
-      </div>
-      <!--首页右侧栏-->
-               <aside class="asideBar col w-md bg-white-only b-l bg-auto no-border-xs" role="complementary">
-     <div id="sidebar">
-      <section id="tabs-4" class="widget widget_tabs clear">
-       <div class="nav-tabs-alt no-js-hide">
-        <ul class="nav nav-tabs nav-justified" role="tablist">
-         <li class="active" role="presentation"> <a href="#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"> <i class="glyphicon glyphicon-fire text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">热门文章</span> </a></li>
-                     <li role="presentation"> <a href="#widget-tabs-4-comments" role="tab" aria-controls="widget-tabs-4-comments" aria-expanded="false" data-toggle="tab"> <i class="glyphicon glyphicon-comment text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">最新评论</span> </a></li>
-                     <li role="presentation"> <a href="#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <i class="glyphicon glyphicon-transfer text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">随机文章</span> </a></li>
-        </ul>
-       </div>
-       <div class="tab-content">
-       <!--热门文章-->
-        <div id="widget-tabs-4-hots" class="tab-pane  fade in wrapper-md active" role="tabpanel">
-         <h3 class="widget-title m-t-none text-md">热门文章</h3>
-         <ul class="list-group no-bg no-borders pull-in m-b-none">
-          <li class="list-group-item">
-                <a href="https://moeclub.org/2018/04/03/603/" class="pull-left thumb-sm m-r"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h"> <a href="https://moeclub.org/2018/04/03/603/" title="[ Linux VPS ] Debian/Ubuntu/CentOS 网络安装/网络重装/纯净安装 一键脚本"> [ Linux VPS ] Debian/Ubuntu/CentOS 网络安装/网络重装/纯净安装 一键脚本 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">5719</span>
-                    </span>
-              </small></div></li><li class="list-group-item">
-                <a href="https://moeclub.org/2017/11/19/483/" class="pull-left thumb-sm m-r"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h"> <a href="https://moeclub.org/2017/11/19/483/" title="[ Linux Shell ] 通用无限制在 Linux VPS 上一键全自动 dd 安装 Windows 系统"> [ Linux Shell ] 通用无限制在 Linux VPS 上一键全自动 dd 安装 Windows 系统 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">5081</span>
-                    </span>
-              </small></div></li><li class="list-group-item">
-                <a href="https://moeclub.org/2018/12/09/722/" class="pull-left thumb-sm m-r"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h"> <a href="https://moeclub.org/2018/12/09/722/" title="[ 科普 ] Microsoft Office365 A1/A1P/E3 MSDN/E3 Trial 区别以及风险"> [ 科普 ] Microsoft Office365 A1/A1P/E3 MSDN/E3 Trial 区别以及风险 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">4239</span>
-                    </span>
-              </small></div></li><li class="list-group-item">
-                <a href="https://moeclub.org/2017/03/09/14/" class="pull-left thumb-sm m-r"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h"> <a href="https://moeclub.org/2017/03/09/14/" title="[lotServer] [serverSpeeder] [锐速] 安装"> [lotServer] [serverSpeeder] [锐速] 安装 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">4175</span>
-                    </span>
-              </small></div></li><li class="list-group-item">
-                <a href="https://moeclub.org/2019/01/18/730/" class="pull-left thumb-sm m-r"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h"> <a href="https://moeclub.org/2019/01/18/730/" title="[PowerShell] 无需全局管理员权限查看 Office365 组织内的订阅属性(订阅日期,许可证,全局管理员状态等)"> [PowerShell] 无需全局管理员权限查看 Office365 组织内的订阅属性(订阅日期,许可证,全局管理员状态等) </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3655</span>
-                    </span>
-              </small></div></li>         </ul>
-        </div>
-                   <!--最新评论-->
-        <div id="widget-tabs-4-comments" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
-         <h3 class="widget-title m-t-none text-md">最新评论</h3>
-         <ul class="list-group no-borders pull-in auto m-b-none no-bg">
-                              <li class="list-group-item">
-
-              <a href="https://moeclub.org/2018/12/03/714/#comment-2080" class="pull-left thumb-sm avatar m-r">
-                                </a>
-              <a href="https://moeclub.org/2018/12/03/714/#comment-2080" class="text-muted">
-                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                  <span class="sr-only"></span>-->
-              </a>
-              <div class="clear">
-                  <div class="text-ellipsis">
-                      <a href="https://moeclub.org/2018/12/03/714/#comment-2080" title="固态水"> 固态水 </a>
-                  </div>
-                  <small class="text-muted">
-                      <span>
-                          博主的镜像有两个问题: 1. 远程没有开启UDP, 只有TCP...                      </span>
-                  </small>
-              </div>
-          </li>
-                    <li class="list-group-item">
-
-              <a href="https://moeclub.org/2018/10/31/670/#comment-2079" class="pull-left thumb-sm avatar m-r">
-                                </a>
-              <a href="https://moeclub.org/2018/10/31/670/#comment-2079" class="text-muted">
-                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                  <span class="sr-only"></span>-->
-              </a>
-              <div class="clear">
-                  <div class="text-ellipsis">
-                      <a href="https://moeclub.org/2018/10/31/670/#comment-2079" title="菌"> 菌 </a>
-                  </div>
-                  <small class="text-muted">
-                      <span>
-                          一周过去惹，大佬还没修复QWQ                      </span>
-                  </small>
-              </div>
-          </li>
-                    <li class="list-group-item">
-
-              <a href="https://moeclub.org/2018/10/31/670/#comment-2077" class="pull-left thumb-sm avatar m-r">
-                                </a>
-              <a href="https://moeclub.org/2018/10/31/670/#comment-2077" class="text-muted">
-                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                  <span class="sr-only"></span>-->
-              </a>
-              <div class="clear">
-                  <div class="text-ellipsis">
-                      <a href="https://moeclub.org/2018/10/31/670/#comment-2077" title="A.k"> A.k </a>
-                  </div>
-                  <small class="text-muted">
-                      <span>
-                          博主能把镜像暂时分享出来吗？原文链接挂了                      </span>
-                  </small>
-              </div>
-          </li>
-                    <li class="list-group-item">
-
-              <a href="https://moeclub.org/2018/10/31/670/#comment-2076" class="pull-left thumb-sm avatar m-r">
-                                </a>
-              <a href="https://moeclub.org/2018/10/31/670/#comment-2076" class="text-muted">
-                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                  <span class="sr-only"></span>-->
-              </a>
-              <div class="clear">
-                  <div class="text-ellipsis">
-                      <a href="https://moeclub.org/2018/10/31/670/#comment-2076" title="跨境电商之家"> 跨境电商之家 </a>
-                  </div>
-                  <small class="text-muted">
-                      <span>
-                          非常不错！！！                      </span>
-                  </small>
-              </div>
-          </li>
-                    <li class="list-group-item">
-
-              <a href="https://moeclub.org/2018/10/31/670/#comment-2074" class="pull-left thumb-sm avatar m-r">
-                                </a>
-              <a href="https://moeclub.org/2018/10/31/670/#comment-2074" class="text-muted">
-                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                  <span class="sr-only"></span>-->
-              </a>
-              <div class="clear">
-                  <div class="text-ellipsis">
-                      <a href="https://moeclub.org/2018/10/31/670/#comment-2074" title="错误啦大佬快修"> 错误啦大佬快修 </a>
-                  </div>
-                  <small class="text-muted">
-                      <span>
-                          大佬怎么还不修，这个错误几个礼拜了Downloading 'i...                      </span>
-                  </small>
-              </div>
-          </li>
-                   </ul>
-        </div>
-                   <!--随机文章-->
-        <div id="widget-tabs-4-random" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
-            <h3 class="widget-title m-t-none text-md">随机文章</h3>
-            <ul class="list-group no-bg no-borders pull-in">
-            <li class="list-group-item">
-                <a href="https://moeclub.org/2017/04/10/121/" class="pull-left thumb-sm m-r"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h"> <a href="https://moeclub.org/2017/04/10/121/" title="Windows PC 镜像"> Windows PC 镜像 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">645</span>
-                    </span>
-              </small></div></li><li class="list-group-item">
-                <a href="https://moeclub.org/2017/03/24/78/" class="pull-left thumb-sm m-r"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h"> <a href="https://moeclub.org/2017/03/24/78/" title="[ LinuxShell ] 使用cadaver快速上传文件/文件夹至WebDAV网盘"> [ LinuxShell ] 使用cadaver快速上传文件/文件夹至WebDAV网盘 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">486</span>
-                    </span>
-              </small></div></li><li class="list-group-item">
-                <a href="https://moeclub.org/2017/09/12/388/" class="pull-left thumb-sm m-r"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h"> <a href="https://moeclub.org/2017/09/12/388/" title="[ eBesucher ] 让吃灰的机器挂机回本"> [ eBesucher ] 让吃灰的机器挂机回本 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">850</span>
-                    </span>
-              </small></div></li><li class="list-group-item">
-                <a href="https://moeclub.org/2017/04/19/133/" class="pull-left thumb-sm m-r"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h"> <a href="https://moeclub.org/2017/04/19/133/" title="[教程] YiFile网盘免等待"> [教程] YiFile网盘免等待 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1265</span>
-                    </span>
-              </small></div></li><li class="list-group-item">
-                <a href="https://moeclub.org/2017/10/06/426/" class="pull-left thumb-sm m-r"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h"> <a href="https://moeclub.org/2017/10/06/426/" title="[ 测速 ] 使用 iPerf 测试主机间的传输速度"> [ 测速 ] 使用 iPerf 测试主机间的传输速度 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">475</span>
-                    </span>
-              </small></div></li>            </ul>
-        </div>
-       </div>
-      </section>
-              <!--广告位置-->
-        <section id="a_d_sidebar" class="widget widget_categories wrapper-md clear">
-           <p style="text-align:center;"><ins class="adsbygoogle" style="display:block;height:60px" data-ad-client="ca-pub-8044984357691297" data-ad-slot="2921577369"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></p><br/><br/><p style="text-align: center"><a href="https://cloud.tencent.com/redirect.php?redirect=10002&cps_key=c63eff7fe8d172d247b795e9b62fbf8f" target="_blank" ><img src="https://moeclub.org/usr/themes/handsome/assets/img/banner/qcloud.png"><br/><strong>腾讯云|特惠活动享受更低折扣</strong></a><br/><br/><a href="https://www.vultr.com/match/?ref=7121021" target="_blank" ><img src="https://moeclub.org/usr/themes/handsome/assets/img/banner/vultr.png"><br/><strong>Vultr 东京机房可选|超低延时<br/><span style="color:green">低至2.5$/月|支持支付宝</span></strong></a><br/><br/><a href="https://www.ultravps.eu/?pdid=OB585542525DO6331C64" target="_blank" ><img src="https://moeclub.org/usr/themes/handsome/assets/img/banner/ultravps.png"><br/><strong>UltraVPS.eu 德国品质|2$/月</strong></a></p>        </section>
-            <!--博客信息-->
-            <!--在文章页面输出目录，在其他页面输出标签云-->
-            <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
-       <h3 class="widget-title m-t-none text-md">标签云</h3>
-       <div class="tags l-h-2x">
-                                       <a href="https://moeclub.org/tag/Linux-Shell/" class="label bg-info" title="该标签下有 22 篇文章" data-toggle="tooltip">Linux Shell</a>
-                        <a href="https://moeclub.org/tag/Windows/" class="label bg-info" title="该标签下有 17 篇文章" data-toggle="tooltip">Windows</a>
-                        <a href="https://moeclub.org/tag/Linux/" class="label bg-info" title="该标签下有 16 篇文章" data-toggle="tooltip">Linux</a>
-                        <a href="https://moeclub.org/tag/Debian/" class="label bg-info" title="该标签下有 10 篇文章" data-toggle="tooltip">Debian</a>
-                        <a href="https://moeclub.org/tag/ocserv/" class="label bg-info" title="该标签下有 9 篇文章" data-toggle="tooltip">ocserv</a>
-                        <a href="https://moeclub.org/tag/AnyConnect/" class="label bg-info" title="该标签下有 8 篇文章" data-toggle="tooltip">AnyConnect</a>
-                        <a href="https://moeclub.org/tag/Windows-Server/" class="label bg-info" title="该标签下有 7 篇文章" data-toggle="tooltip">Windows Server</a>
-                        <a href="https://moeclub.org/tag/VPS/" class="label bg-info" title="该标签下有 7 篇文章" data-toggle="tooltip">VPS</a>
-                        <a href="https://moeclub.org/tag/OneDrive/" class="label bg-info" title="该标签下有 5 篇文章" data-toggle="tooltip">OneDrive</a>
-                        <a href="https://moeclub.org/tag/OwnCloud/" class="label bg-info" title="该标签下有 5 篇文章" data-toggle="tooltip">OwnCloud</a>
-                        <a href="https://moeclub.org/tag/OneDrive-for-Business/" class="label bg-info" title="该标签下有 5 篇文章" data-toggle="tooltip">OneDrive for Business</a>
-                        <a href="https://moeclub.org/tag/nginx/" class="label bg-info" title="该标签下有 5 篇文章" data-toggle="tooltip">nginx</a>
-                        <a href="https://moeclub.org/tag/Windows10/" class="label bg-info" title="该标签下有 5 篇文章" data-toggle="tooltip">Windows10</a>
-                        <a href="https://moeclub.org/tag/%E4%BC%98%E6%83%A0%E7%A0%81/" class="label bg-info" title="该标签下有 5 篇文章" data-toggle="tooltip">优惠码</a>
-                        <a href="https://moeclub.org/tag/Windwos/" class="label bg-info" title="该标签下有 4 篇文章" data-toggle="tooltip">Windwos</a>
-                        <a href="https://moeclub.org/tag/Windows-PC/" class="label bg-info" title="该标签下有 4 篇文章" data-toggle="tooltip">Windows PC</a>
-                        <a href="https://moeclub.org/tag/%E8%AF%81%E4%B9%A6%E7%99%BB%E5%BD%95/" class="label bg-info" title="该标签下有 4 篇文章" data-toggle="tooltip">证书登录</a>
-                        <a href="https://moeclub.org/tag/XMR/" class="label bg-info" title="该标签下有 4 篇文章" data-toggle="tooltip">XMR</a>
-                        <a href="https://moeclub.org/tag/Python/" class="label bg-info" title="该标签下有 4 篇文章" data-toggle="tooltip">Python</a>
-                        <a href="https://moeclub.org/tag/owncloud-DirectLink/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">owncloud DirectLink</a>
-                        <a href="https://moeclub.org/tag/Google-Drive/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">Google Drive</a>
-                        <a href="https://moeclub.org/tag/PT/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">PT</a>
-                        <a href="https://moeclub.org/tag/HTTP/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">HTTP</a>
-                        <a href="https://moeclub.org/tag/Transmission/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">Transmission</a>
-                        <a href="https://moeclub.org/tag/libev/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">libev</a>
-                        <a href="https://moeclub.org/tag/Ubuntu/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">Ubuntu</a>
-                        <a href="https://moeclub.org/tag/%E6%8C%82%E8%BD%BD/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">挂载</a>
-                        <a href="https://moeclub.org/tag/ruisu/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">ruisu</a>
-                        <a href="https://moeclub.org/tag/Android/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">Android</a>
-                        <a href="https://moeclub.org/tag/Python3/" class="label bg-info" title="该标签下有 3 篇文章" data-toggle="tooltip">Python3</a>
-                           </div>
-      </section>
-        </div>
-     </aside>
-      </div>
-  </main>
-    <!-- footer -->
-  </div><!-- /content -->
-  <footer id="footer" class="app-footer" role="footer">
-    <div class="wrapper b-t bg-light">
-      <span class="pull-right hidden-xs">&copy;&nbsp;2019 Copyright&nbsp;</span>
-      <span>&nbsp;<a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">沪ICP备17011112号-3</a></span>
-    </div>
-      
-      <div class="topButton panel panel-default">
-          <button id="goToTop" class="btn btn-default no-shadow pos-abt hide">
-              <i class="fontello fontello-chevron-circle-up" aria-hidden="true"></i>
-          </button>
-      </div>
-  </footer>
-  </div><!--end of .app app-header-fixed-->
-
-
-    <!--定义全局变量-->
-    <script type="text/javascript">
-        window['LocalConst'] = {
-            COMMENT_NAME_INFO: '必须填写昵称',
-            COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
-            COMMENT_EMAIL_LEGAL_INFO: '邮箱地址不合法',
-            COMMENT_MATH_INFO: '必须填写正确的验证码',
-            COMMENT_CONTENT_INFO: '必须填写评论内容',
-            COMMENT_SUBMIT_ERROR: '提交失败，请重试！',
-            COMMENT_CONTENT_LEGAL_INFO: '提交失败,您的输入内容不符合规则！',
-
-            LOGIN_USERNAME_INFO: '必须填写用户名',
-            LOGIN_PASSWORD_INFO: '请填写密码',
-            LOGIN_SUBMIT_ERROR: '登录失败，请重新登录',
-            LOGIN_SUBMIT_INFO: '用户名或者密码错误，请重试',
-            LOGIN_SUBMIT_SUCCESS: '登录成功',
-            CLICK_TO_REFRESH: '点击以刷新页面',
-            LOGOUT_SUCCESS_REFRESH: '退出成功，正在刷新当前页面',
-
-            LOGOUT_ERROR: '退出失败，请重试',
-            LOGOUT_SUCCESS: '退出成功',
-
-            SUBMIT_PASSWORD_INFO: '密码错误，请重试',
-            COMMENT_TITLE: '评论通知',
-            LOGIN_TITLE: '登录通知',
-
-            COMMENT_SYSTEM: '0',
-            COMMENT_SYSTEM_ROOT: '0',
-            EMOJI: '表情',
-            IS_PJAX: '1',
-            IS_PAJX_COMMENT: '',
-            BASE_SCRIPT_URL: 'https://moeclub.org/usr/themes/handsome/',
-            BLOG_URL: 'https://moeclub.org',
-            THEME_COLOR: '8',
-            THEME_HEADER_FIX: '1',
-            THEME_ASIDE_FIX: '1',
-            THEME_ASIDE_FOLDED: '',
-            THEME_ASIDE_DOCK: '',
-            THEME_CONTAINER_BOX: '',
-            THEME_HIGHLIGHT_CODE: '1',
-            THEME_TOC: '1',
-            TOC_TITLE: '文章目录',
-            HEADER_FIX: '固定头部',
-            ASIDE_FIX: '固定导航',
-            ASIDE_FOLDED: '折叠导航',
-            ASIDE_DOCK: '置顶导航',
-            CONTAINER_BOX: '盒子模型',
-            OFF_SCROLL_HEIGHT: '50',
-            COMMENT_REJECT_PLACEHOLDER: '居然什么也不说，哼!',
-            COMMENT_PLACEHOLDER: '说点什么吧……',
-            SHOW_SETTING_BUTTON: '',
-            OPERATION_NOTICE: '操作通知',
-            SCREENSHOT_BEGIN: '正在生成当前页面截图……',
-            SCREENSHOT_NOTICE: '点击顶部下载按钮保存当前卡片',
-            SCREENSHORT_ERROR: '由于图片跨域原因导致截图失败',
-            SCREENSHORT_SUCCESS: '截图成功',
-            CDN_NAME: ''
-        };
-
-    </script>
-
-
-
-<!--CDN加载-->
-<script src="https://moeclub.org/usr/themes/handsome/assets/js/bootstrap.min.js"></script>
-
-
-    <script src="https://moeclub.org/usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="text/javascript"></script>
-    <script>
-        $(document).pjax('a[href^="https://moeclub.org/"]:not(a[target="_blank"], a[no-pjax])', {
-            container: '#content',
-            fragment: '#content',
-            timeout: 8000
-        }).on('pjax:send',function () {
-                        $('#loading').removeClass('hide');
-                    }).on('pjax:click', function() {
-
-            window['Page'].doPJAXClickAction();
-            
-                        $('body,html').animate({scrollTop:0},100);
-            
-
-        }).on('pjax:complete', function() {
-            window['Page'].doPJAXCompleteAction();
-
-
-                                    $('#loading').addClass('hide');
-            
-                        
-
-        })
-    </script>
-
-
-<!--主题组件js加载-->
-
-    <!--平滑滚动组件-->
-    <script src="https://moeclub.org/usr/themes/handsome/assets/js/features/SmoothScroll.min.js"></script>
-
-<!--pjax动画组件-->
-
-
-
-
-<!--lightgallery必备组件-->
-<script src="https://moeclub.org/usr/themes/handsome/assets/js/features/jquery.fancybox.min.js"></script>
-
-    <!--component/comments.php 页面必需js（只有选择了原生评论的时候才会加载）-->
-    <script src="https://moeclub.org/usr/themes/handsome/assets/js/features/OwO.min.js"></script>
-    <!--component/comments.php 必需js结束-->
-
-
-<!--主题组件js加载结束-->
-
-<!--主题核心js-->
-    <script src="https://moeclub.org/usr/themes/handsome/assets/js/function.min.js"></script>
-    <script src="https://moeclub.org/usr/themes/handsome/assets/js/core.min.js"></script>
-
-
-    <script type="text/javascript">
-            </script>
-
-<script type="text/javascript">
-var _hmt = _hmt || [];
-(function(){
-   var bp = document.createElement('script');
-   var hm = document.createElement("script");
-   hm.src = '//hm.baidu.com/hm.js?07a44bde9f1bb59d67fbf77125d3ddd9';
-   bp.src = '//zz.bdstatic.com/linksubmit/push.js';
-   var s = document.getElementsByTagName("script")[0];
-   s.parentNode.insertBefore(bp, s);
-   s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-</body>
-</html><!--html end-->
-    <!-- / footer -->
+	</body>
