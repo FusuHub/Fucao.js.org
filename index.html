@@ -1,25 +1,226 @@
-<!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>暴风</title>
-<style>
-html body{
-    margin:0px;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:#000;
-} 
-#canvas{
-    position:absolute;
-    width:100%;
-    height:100;
-}    
-</style>
-</head>
-<body>
-<canvas id="canvas"></canvas>
-<script src="js/index.js"></script>
-</body>
-</html>
+
+	<head>
+
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<title>陌上花开缓缓归</title>
+
+		<style type="text/css">
+			body {
+				background: #090d00;
+			}
+			.text {
+				font: 400 0.6em/1.5 "Neuton"; 
+				color: rgba(255,255,255,.25);
+				text-align: center;
+			}
+			.text p {
+				color: #848484;
+				text-transform: uppercase;
+				letter-spacing: .5em;
+				display: inline-block;
+				border: 4px double rgba(255,255,255,.25);
+				border-width: 4px 0;
+				padding: 1.5em 0em;
+				position: absolute;
+				top: 18%;
+				left: 50%;
+				width: 40em;
+				margin: 0 0 0 -20em;
+			}
+			.text p span {
+				font: 700 4em/1 "Oswald", sans-serif;
+				letter-spacing: 0;
+				padding: .25em 0 .325em;
+				display: block;
+				margin: 0 auto;
+				text-shadow: 0 0 80px rgba(255,255,255,.5);
+				background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				-webkit-animation: aitf 80s linear infinite;
+				-webkit-transform: translate3d(0,0,0);
+				-webkit-backface-visibility: hidden;
+			}
+			@-webkit-keyframes aitf {
+				0% {
+					background-position: 0% 50%;
+				}
+				100% {
+					background-position: 100% 50%;
+				}
+			}
+			/* COMMON CLASSES */
+			.break { clear:both; }
+			/* WRAPPER */
+			#wrapper { width:800px; margin:40px auto; }
+			/* CONTENT */
+			#content { }
+			#content h2 { font: bold 30px Helvetica, Arial, Sans-serif; color:#eee; text-shadow: 0px 2px 6px #333; margin-left:400px; padding-top:20px; }
+			/* BAR CHART */
+			#bar { list-style:none;	}
+			#bar li { }
+			/* Last bottom should have a shadow */
+			#bar li div.bottom { -moz-box-shadow: 0 10px 10px hsla(0,0%,0%,.2); -webkit-box-shadow: 0 10px 30px hsla(0,0%,0%,.2); box-shadow: 0 10px 30px hsla(0,0%,0%,.2); }
+			/* Ellipse top */
+			#bar li div.top { background-color:rgba(213,238,241,0.5); position:relative; float:left; margin-left:10px;
+				width:40px; height:100px; -moz-border-radius: 40px/100px; -webkit-border-radius: 40px 100px; border-radius: 40px/100px;
+				-webkit-transition-property: margin-left;
+				-webkit-transition-duration: 500ms;
+			}
+			#bar li div.top img { margin-left:10px; margin-top:15px; }
+			#bar li div.top h3 { color: white; }
+			/* Bar bottom */
+			#bar li div.bottom { position:relative; margin:5px 0; width:50px;
+				height:100px; -moz-border-radius: 40px/100px; -webkit-border-radius: 40px 100px; border-radius: 40px/100px;
+				background:-moz-linear-gradient(-90deg, #97a7a9, #b8cbcd); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#97a7a9), to(#b8cbcd));
+				-webkit-transition-property: width;
+				-webkit-transition-duration: 500ms;
+			}
+			#bar li div.bottom div.infobox { padding:40px 0 0 600px;
+				-webkit-transition-property: color;
+				-webkit-transition-duration: 500ms;
+			}
+			#bar li div.bottom div.infobox h3 { font-family:Georgia,serif,Times;}
+			#bar li div.bottom div.infobox p { font-family:"Lucida Grande",Arial,Helvetica,Sans-Serif; opacity: 0; font-size: 30;
+				-webkit-transition-property: opacity;
+				-webkit-transition-duration: 500ms;
+			}
+			/* General hover actions */
+			#bar li:hover div.bottom div.infobox { color:#eee; text-shadow: 0px 5px 5px #111; }
+			#bar li:hover div.bottom div.infobox p { opacity:1; }
+			#html div.top { z-index:99; }
+			#html div.bottom { z-index:98; height:150px; }
+			#html:hover div.top { z-index:999; background-color:#FE9A2E; margin-left:320px; }
+			#html:hover div.bottom { z-index:998; background-color:#FE9A2E; width:360px;
+				background:-moz-linear-gradient(-90deg, #FE9A2E, #FE9A2E); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#FE9A2E), to(#FE9A2E)); }
+			#css div.top { z-index:97; }
+			#css div.bottom { z-index:96; height:200px; }
+			#css:hover div.top { z-index:997; background-color:#0174DF; margin-left:200px; }
+			#css:hover div.bottom { z-index:996; background-color:#0174DF; width:240px;
+				background:-moz-linear-gradient(-90deg, #0174DF, #0174DF); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#0174DF), to(#0174DF)); }
+			#js div.top { z-index:95; }
+			#js div.bottom { z-index:94; height:250px; }
+			#js:hover div.top { z-index:995; background-color:#F4FA58; margin-left:390px; }
+			#js:hover div.bottom { z-index:994; background-color:#F4FA58; width:430px;
+				background:-moz-linear-gradient(-90deg, #F4FA58, #F4FA58); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#F4FA58), to(#F4FA58)); }
+			#lua div.top { z-index:93; }
+			#lua div.bottom { z-index:92; height:100px; }
+			#lua:hover div.top { z-index:993; background-color:#013ADF; margin-left:160px; }
+			#lua:hover div.bottom { z-index:992; background-color:#013ADF; width:200px;
+				background:-moz-linear-gradient(-90deg, #013ADF, #013ADF); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#013ADF), to(#013ADF)); }
+			.link-1 a {
+				display: block;
+				color: #848484;
+				text-decoration: none;
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%);
+			}
+			.link-1 a::after{
+				content: "";
+				background: white;
+				mix-blend-mode: exclusion;
+				width: calc(100% + 20px);
+				height: 0;
+				position: absolute;
+				bottom: -4px;
+				left: -10px;
+				transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			}
+			.link-1 a:hover::after{
+				height: calc(100% + 8px)
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="text">
+
+			<p>
+
+				Love
+
+				<span>
+
+					陌上花开缓缓归
+
+				</span>
+
+				 What a wonderful world 
+
+			</p>
+
+		</div>
+
+    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    	<center>
+    		<font color="#848484" size="5">
+
+
+
+	
+       <img src="gangbi.png"width=35% height=80%>
+
+			
+<width=60% height=100%>
+	</p>
+        <p>
+				              <h1>美文鉴赏</h1>         
+
+	</p>
+        <p>
+	
+
+	                                     《生命的短暂》
+
+       </p>
+       <p>
+	那是一个阳光明媚、风和日丽的早晨。我和妈妈来到菜场，菜场的东西可真是琳琅满目！在水产区我一眼就挑中了一只金鱼，肥肥的，真可爱。可一想到一只金鱼太孤单，正当我不知道该怎么选择时，热情的老板似乎看透了我的心思，对我说：“小朋友，我们这有一只眼睛瞎的金鱼，也卖不出去，干脆送给你得了！”我高心极了，急忙点头。就这样，两条金鱼被我带回了家。
+
+ 回到家，我急忙把金鱼们放进了鱼缸，就准备喂食。可是，我扔了5颗鱼食进去，居然都被那条肥金鱼吃了。而眼睛看不见的那只金鱼却一颗也没有吃到。因此我给你取了个名字——“小不点”。从那天以后，我都会非常细心的照顾你。给你喂食、陪你玩耍……那是一个炎热的中午，我放学后，以刘翔一样快的速度跑回了家。把鱼食放在棍子上，放在你的面前。你昂起头，似乎察觉到了什么。我把棍子往前移，你就往前移，我把棍子往后移，你也往后移。终于，你使劲咬，咬住了鱼食，美滋滋地吃了起来。那天，我和你渡过了一个美好的中午。你的嗅觉也渐渐地提高了！
+    
+    3月28日，是我的十岁生日。我把你一起带进了饭馆。吃完饭后，我把你放在酒店的大盆子里。你活蹦乱跳的在盆里游呀游，那样子可真讨人喜欢。就在这时，你突然昂起头来，不停地跳舞，好像在为我唱着生日歌，我非常高兴，喂你了几颗鱼食。你好像也明白了我的谢意，不停地摆动着身体，仿佛在说：“谢谢你，小主人，我太爱你啦！”生日那天我过的非常开心，因为有了你的陪伴。
+    
+    可是，就在我生日后的一个星期。你走了，顿时，我的心就如刀绞一般。我拼命地摇晃着你，可你依然一动不动。你就这样离开了我，让我的生活也少了几分色彩…….
+    
+    从你离开我的那一刻，我明白了，生命是短暂的，是金钱也买不回来的。所以，我要对大家说：“生命是宝贵的，我们要爱惜生命！     
+       </p>
+       <p>
+    <hr style=" width:20%; display:inline-block" />
+			
+			
+</p>
+<p>			
+<textarea rows="10" cols="100">
+最新
+
+</textarea>
+</p>
+<p	
+
+	
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<center>
+
+			<div class="link-1">
+
+				<font size="6"><a href="https://fucao.js.org">Fucao</font>
+
+			</div>
+
+		</center>
+
+	</body>
