@@ -1,226 +1,1705 @@
-<html>
 
-	<head>
-
-		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-		<title>陌上花开缓缓归</title>
-
-		<style type="text/css">
-			body {
-				background: #090d00;
-			}
-			.text {
-				font: 400 0.6em/1.5 "Neuton"; 
-				color: rgba(255,255,255,.25);
-				text-align: center;
-			}
-			.text p {
-				color: #848484;
-				text-transform: uppercase;
-				letter-spacing: .5em;
-				display: inline-block;
-				border: 4px double rgba(255,255,255,.25);
-				border-width: 4px 0;
-				padding: 1.5em 0em;
-				position: absolute;
-				top: 18%;
-				left: 50%;
-				width: 40em;
-				margin: 0 0 0 -20em;
-			}
-			.text p span {
-				font: 700 4em/1 "Oswald", sans-serif;
-				letter-spacing: 0;
-				padding: .25em 0 .325em;
-				display: block;
-				margin: 0 auto;
-				text-shadow: 0 0 80px rgba(255,255,255,.5);
-				background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
-				-webkit-background-clip: text;
-				background-clip: text;
-				-webkit-text-fill-color: transparent;
-				-webkit-animation: aitf 80s linear infinite;
-				-webkit-transform: translate3d(0,0,0);
-				-webkit-backface-visibility: hidden;
-			}
-			@-webkit-keyframes aitf {
-				0% {
-					background-position: 0% 50%;
-				}
-				100% {
-					background-position: 100% 50%;
-				}
-			}
-			/* COMMON CLASSES */
-			.break { clear:both; }
-			/* WRAPPER */
-			#wrapper { width:800px; margin:40px auto; }
-			/* CONTENT */
-			#content { }
-			#content h2 { font: bold 30px Helvetica, Arial, Sans-serif; color:#eee; text-shadow: 0px 2px 6px #333; margin-left:400px; padding-top:20px; }
-			/* BAR CHART */
-			#bar { list-style:none;	}
-			#bar li { }
-			/* Last bottom should have a shadow */
-			#bar li div.bottom { -moz-box-shadow: 0 10px 10px hsla(0,0%,0%,.2); -webkit-box-shadow: 0 10px 30px hsla(0,0%,0%,.2); box-shadow: 0 10px 30px hsla(0,0%,0%,.2); }
-			/* Ellipse top */
-			#bar li div.top { background-color:rgba(213,238,241,0.5); position:relative; float:left; margin-left:10px;
-				width:40px; height:100px; -moz-border-radius: 40px/100px; -webkit-border-radius: 40px 100px; border-radius: 40px/100px;
-				-webkit-transition-property: margin-left;
-				-webkit-transition-duration: 500ms;
-			}
-			#bar li div.top img { margin-left:10px; margin-top:15px; }
-			#bar li div.top h3 { color: white; }
-			/* Bar bottom */
-			#bar li div.bottom { position:relative; margin:5px 0; width:50px;
-				height:100px; -moz-border-radius: 40px/100px; -webkit-border-radius: 40px 100px; border-radius: 40px/100px;
-				background:-moz-linear-gradient(-90deg, #97a7a9, #b8cbcd); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#97a7a9), to(#b8cbcd));
-				-webkit-transition-property: width;
-				-webkit-transition-duration: 500ms;
-			}
-			#bar li div.bottom div.infobox { padding:40px 0 0 600px;
-				-webkit-transition-property: color;
-				-webkit-transition-duration: 500ms;
-			}
-			#bar li div.bottom div.infobox h3 { font-family:Georgia,serif,Times;}
-			#bar li div.bottom div.infobox p { font-family:"Lucida Grande",Arial,Helvetica,Sans-Serif; opacity: 0; font-size: 30;
-				-webkit-transition-property: opacity;
-				-webkit-transition-duration: 500ms;
-			}
-			/* General hover actions */
-			#bar li:hover div.bottom div.infobox { color:#eee; text-shadow: 0px 5px 5px #111; }
-			#bar li:hover div.bottom div.infobox p { opacity:1; }
-			#html div.top { z-index:99; }
-			#html div.bottom { z-index:98; height:150px; }
-			#html:hover div.top { z-index:999; background-color:#FE9A2E; margin-left:320px; }
-			#html:hover div.bottom { z-index:998; background-color:#FE9A2E; width:360px;
-				background:-moz-linear-gradient(-90deg, #FE9A2E, #FE9A2E); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#FE9A2E), to(#FE9A2E)); }
-			#css div.top { z-index:97; }
-			#css div.bottom { z-index:96; height:200px; }
-			#css:hover div.top { z-index:997; background-color:#0174DF; margin-left:200px; }
-			#css:hover div.bottom { z-index:996; background-color:#0174DF; width:240px;
-				background:-moz-linear-gradient(-90deg, #0174DF, #0174DF); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#0174DF), to(#0174DF)); }
-			#js div.top { z-index:95; }
-			#js div.bottom { z-index:94; height:250px; }
-			#js:hover div.top { z-index:995; background-color:#F4FA58; margin-left:390px; }
-			#js:hover div.bottom { z-index:994; background-color:#F4FA58; width:430px;
-				background:-moz-linear-gradient(-90deg, #F4FA58, #F4FA58); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#F4FA58), to(#F4FA58)); }
-			#lua div.top { z-index:93; }
-			#lua div.bottom { z-index:92; height:100px; }
-			#lua:hover div.top { z-index:993; background-color:#013ADF; margin-left:160px; }
-			#lua:hover div.bottom { z-index:992; background-color:#013ADF; width:200px;
-				background:-moz-linear-gradient(-90deg, #013ADF, #013ADF); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#013ADF), to(#013ADF)); }
-			.link-1 a {
-				display: block;
-				color: #848484;
-				text-decoration: none;
-				position: absolute;
-				left: 50%;
-				transform: translate(-50%);
-			}
-			.link-1 a::after{
-				content: "";
-				background: white;
-				mix-blend-mode: exclusion;
-				width: calc(100% + 20px);
-				height: 0;
-				position: absolute;
-				bottom: -4px;
-				left: -10px;
-				transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-			}
-			.link-1 a:hover::after{
-				height: calc(100% + 8px)
-			}
-		</style>
-
-	</head>
-
-	<body>
-
-		<div class="text">
-
-			<p>
-
-				Love
-
-				<span>
-
-					陌上花开缓缓归
-
-				</span>
-
-				 What a wonderful world 
-
-			</p>
-
-		</div>
-
-    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    	<center>
-    		<font color="#848484" size="5">
-
-
-
-	
-       <img src="gangbi.png"width=35% height=80%>
-
-			
-<width=60% height=100%>
-	</p>
-        <p>
-				              <h1>美文鉴赏</h1>         
-
-	</p>
-        <p>
-	
-
-	                                     《生命的短暂》
-
-       </p>
-       <p>
-	那是一个阳光明媚、风和日丽的早晨。我和妈妈来到菜场，菜场的东西可真是琳琅满目！在水产区我一眼就挑中了一只金鱼，肥肥的，真可爱。可一想到一只金鱼太孤单，正当我不知道该怎么选择时，热情的老板似乎看透了我的心思，对我说：“小朋友，我们这有一只眼睛瞎的金鱼，也卖不出去，干脆送给你得了！”我高心极了，急忙点头。就这样，两条金鱼被我带回了家。
-
- 回到家，我急忙把金鱼们放进了鱼缸，就准备喂食。可是，我扔了5颗鱼食进去，居然都被那条肥金鱼吃了。而眼睛看不见的那只金鱼却一颗也没有吃到。因此我给你取了个名字——“小不点”。从那天以后，我都会非常细心的照顾你。给你喂食、陪你玩耍……那是一个炎热的中午，我放学后，以刘翔一样快的速度跑回了家。把鱼食放在棍子上，放在你的面前。你昂起头，似乎察觉到了什么。我把棍子往前移，你就往前移，我把棍子往后移，你也往后移。终于，你使劲咬，咬住了鱼食，美滋滋地吃了起来。那天，我和你渡过了一个美好的中午。你的嗅觉也渐渐地提高了！
-    
-    3月28日，是我的十岁生日。我把你一起带进了饭馆。吃完饭后，我把你放在酒店的大盆子里。你活蹦乱跳的在盆里游呀游，那样子可真讨人喜欢。就在这时，你突然昂起头来，不停地跳舞，好像在为我唱着生日歌，我非常高兴，喂你了几颗鱼食。你好像也明白了我的谢意，不停地摆动着身体，仿佛在说：“谢谢你，小主人，我太爱你啦！”生日那天我过的非常开心，因为有了你的陪伴。
-    
-    可是，就在我生日后的一个星期。你走了，顿时，我的心就如刀绞一般。我拼命地摇晃着你，可你依然一动不动。你就这样离开了我，让我的生活也少了几分色彩…….
-    
-    从你离开我的那一刻，我明白了，生命是短暂的，是金钱也买不回来的。所以，我要对大家说：“生命是宝贵的，我们要爱惜生命！     
-       </p>
-       <p>
-    <hr style=" width:20%; display:inline-block" />
-			
-			
-</p>
-<p>			
-<textarea rows="10" cols="100">
-最新
-
-</textarea>
-</p>
-<p	
-
-	
-
-				</ul>
-
-			</div>
-
-		</div>
-
-		<center>
-
-			<div class="link-1">
-
-				<font size="6"><a href="https://fucao.js.org">Fucao</font>
-
-			</div>
-
-		</center>
-
-	</body>
+<!DOCTYPE html><html lang=zh-CN><head><noscript><meta http-equiv=Refresh content="0; URL=/noscript">Sway 需要 JavaScript <br><br> 此 Web 浏览器可能阻止脚本，或不支持 JavaScript。 <br><br> <a href=https://support.office.com/article/Enable-JavaScript-7BB9EE74-6A9E-4DD1-BABF-B0A1BB136361 target=_blank>如何启用 JavaScript</a></noscript><style>body{margin:0}</style><title>Organization Overview</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=alternate type=application/json+oembed href="https://sway.office.com/api/v1.0/oembed?url=https%3a%2f%2fsway.office.com%2fDeIyeMWD1QE4hwBg&amp;format=json" title="Organization Overview"><link rel=canonical href=https://sway.office.com/DeIyeMWD1QE4hwBg><meta charset=utf-8><meta name=description content=""><meta name=keywords><meta name=referrer content=origin-when-cross-origin><meta property=og:title content="Organization Overview"><meta property=og:type content=Website><meta property=og:url content=https://sway.office.com/DeIyeMWD1QE4hwBg><meta property=og:image content="https://wus-www.sway-cdn.com/s/DeIyeMWD1QE4hwBg/images/U7sq7SUV7OcDvX?quality=1080&amp;isThumbnail=True"><meta content=summary_large_image name=twitter:card><meta content=@Sway name=twitter:site><meta content="Organization Overview" name=twitter:title><meta content="使用 Microsoft Sway 创建" name=twitter:description><meta content="https://wus-www.sway-cdn.com/s/DeIyeMWD1QE4hwBg/images/U7sq7SUV7OcDvX?quality=1080&amp;isThumbnail=True" name=twitter:image><meta content=https://sway.office.com/DeIyeMWD1QE4hwBg name=twitter:url><body><div id=app-root></div><script id=app-props type=application/json>
+		{"siteSettings":{"browserFeatures":{"cssGrid":"ApparentModern"},"build":"client","renderType":"ClientRender","sessionId":"61e6b1b0-8ba7-459c-909c-f91a10f4ef9d","siteRootUrl":"https://sway.office.com","contentRootUrl":"https://wus-www.sway-cdn.com/20151285202_Content/","invokeTestHarness":false,"explicitlyV2":false,"lowWatermarkServiceVersion":201,"isPublishEntryPoint":false,"isSiteUiRtl":false},"userSettings":{"authentication":"Anonymous"},"enabledFeatureGates":["DocumentBlockFactory","DocumentNavigation","ShareMenu","SiteSwayButtonRedirectToOfficeCom","DualEdit"],"documentSettings":{"lookupId":"DeIyeMWD1QE4hwBg","storyId":"u6na5VF79BZBbvTHcIJ6","accessibilityView":false,"canEdit":false,"userAccess":"Viewer","blockPrint":false,"blockDuplication":false,"blockExport":false,"blockWorldSwitch":false,"blockSharing":true,"hideMadeWithSway":false,"autoStart":false,"autoLoop":false,"autoDuration":0.0,"isPremium":false,"isTemplate":false,"schemaVersion":134,"audience":3},"documentModel":{
+  "documentProperties": {
+    "documentModelVersion": 21,
+    "swayId": "DeIyeMWD1QE4hwBg",
+    "worldType": "Vertical",
+    "language": "zh-CN",
+    "isRtl": false
+  },
+  "documentIndex": {
+    "swayEditVersion": 2,
+    "readingStats": {
+      "contentCount": 15,
+      "perContentCount": [
+        {
+          "type": "Paragraph",
+          "count": 13
+        },
+        {
+          "type": "Image",
+          "count": 2
+        }
+      ]
+    },
+    "segments": [
+      {
+        "startNodeId": "bElukenJum5Vcb",
+        "lastNodeId": "children_fqkYkZPfJU5FOU",
+        "nodeCount": 52,
+        "contentCount": 6,
+        "continuationToken": "T2!rbElukenJum5Vcb!children_fqkYkZPfJU5FOU",
+        "segmentPurpose": "ContainsH1"
+      },
+      {
+        "startNodeId": "H0Hwcy0yycG87d",
+        "lastNodeId": "E6mLWTbZ_IQiet",
+        "nodeCount": 13,
+        "contentCount": 9,
+        "continuationToken": "T2!rH0Hwcy0yycG87d!E6mLWTbZ_IQiet",
+        "segmentPurpose": "ContainsH1"
+      }
+    ]
+  },
+  "contentNodes": {
+    "bElukenJum5Vcb": {
+      "childrenIds": [
+        "eert8_Sz585T4i",
+        "492hD2FW118BD8",
+        "fqkYkZPfJU5FOU"
+      ],
+      "type": "Hierarchy",
+      "id": "bElukenJum5Vcb",
+      "hierarchyLevel": 0
+    },
+    "sty_bElukenJum5Vcb": {
+      "type": "Placeholder",
+      "id": "sty_bElukenJum5Vcb",
+      "parentId": "bElukenJum5Vcb",
+      "identifier": "Sway:Style:1.2.51"
+    },
+    "clr_sty_bElukenJum5Vcb_S1": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_S1",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_BlockTextBase": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_BlockTextBase",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_BlockTextHighlight": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_BlockTextHighlight",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_CaptionBackground": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_CaptionBackground",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_CaptionText": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_CaptionText",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_ChapterBackground": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_ChapterBackground",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_ChapterText2": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_ChapterText2",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_ChapterText2LineDecorator": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_ChapterText2LineDecorator",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_ChapterTextEmph": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_ChapterTextEmph",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_ClipHighlight": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_ClipHighlight",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_ColumnBackground": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_ColumnBackground",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_Decorator": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_Decorator",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_DecoratorBackground": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_DecoratorBackground",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_FadedImage": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_FadedImage",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_ImageFilterForTextOverlay": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_ImageFilterForTextOverlay",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_PrimaryTitleText": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_PrimaryTitleText",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_PrimaryTitleText2": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_PrimaryTitleText2",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_PrimaryTitleText2Emph": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_PrimaryTitleText2Emph",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_PrimaryTitleText2LineDecorator": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_PrimaryTitleText2LineDecorator",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_PrimaryTitleTextEmph": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_PrimaryTitleTextEmph",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_PrimaryTitleTextLineDecorator": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_PrimaryTitleTextLineDecorator",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_Separator": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_Separator",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_TextEmph": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_TextEmph",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_TextUnemph": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_TextUnemph",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_TitleBackground2": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_TitleBackground2",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_TitleBackgroundVellum": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_TitleBackgroundVellum",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "clr_sty_bElukenJum5Vcb_WorldBackground": {
+      "type": "Placeholder",
+      "id": "clr_sty_bElukenJum5Vcb_WorldBackground",
+      "parentId": "sty_bElukenJum5Vcb",
+      "identifier": "Sway:SwayColor:1.2.42"
+    },
+    "UT1xNafYM00vor": {
+      "type": "DocumentHeading",
+      "id": "UT1xNafYM00vor",
+      "parentId": "bElukenJum5Vcb",
+      "titleId": "text_p6H1YxRHJQBDuP"
+    },
+    "text_p6H1YxRHJQBDuP": {
+      "type": "Text",
+      "id": "text_p6H1YxRHJQBDuP",
+      "parentId": "UT1xNafYM00vor",
+      "textDirection": "None",
+      "textNodeType": "Default"
+    },
+    "p6H1YxRHJQBDuP": {
+      "type": "Paragraph",
+      "id": "p6H1YxRHJQBDuP",
+      "parentId": "text_p6H1YxRHJQBDuP",
+      "text": "Organization Overview",
+      "textDirection": "LeftToRight"
+    },
+    "children_bElukenJum5Vcb": {
+      "type": "Placeholder",
+      "id": "children_bElukenJum5Vcb",
+      "parentId": "bElukenJum5Vcb",
+      "identifier": "Common:Set:1.2.36"
+    },
+    "eert8_Sz585T4i": {
+      "childrenIds": [
+        "bxiB3byCv2pBDT",
+        "W7UXm-pzZY7KSu"
+      ],
+      "type": "Hierarchy",
+      "id": "eert8_Sz585T4i",
+      "parentId": "children_bElukenJum5Vcb",
+      "hierarchyLevel": 1
+    },
+    "children_eert8_Sz585T4i": {
+      "type": "Placeholder",
+      "id": "children_eert8_Sz585T4i",
+      "parentId": "eert8_Sz585T4i",
+      "identifier": "Common:Set:1.2.36"
+    },
+    "bxiB3byCv2pBDT": {
+      "type": "Image",
+      "id": "bxiB3byCv2pBDT",
+      "parentId": "children_eert8_Sz585T4i",
+      "sourceUrl": "https://sway.office.com/s/DeIyeMWD1QE4hwBg/images/_shxW7028NWs9a",
+      "attributionUrl": "",
+      "width": 1826.0,
+      "height": 237.0,
+      "emphasis": "Emphasized",
+      "altText": " (适中)\r\n"
+    },
+    "sourceImg:rZo-FDaodA9tKn": {
+      "type": "Placeholder",
+      "id": "sourceImg:rZo-FDaodA9tKn",
+      "parentId": "bxiB3byCv2pBDT",
+      "identifier": "Common:ImageAtom:1.2.45"
+    },
+    "rZo-FDaodA9tKn": {
+      "type": "Placeholder",
+      "id": "rZo-FDaodA9tKn",
+      "parentId": "bxiB3byCv2pBDT",
+      "identifier": "Common:ImageAtom:1.2.45"
+    },
+    "W7UXm-pzZY7KSu": {
+      "type": "Text",
+      "id": "W7UXm-pzZY7KSu",
+      "parentId": "children_eert8_Sz585T4i",
+      "textDirection": "LeftToRight",
+      "textNodeType": "Default"
+    },
+    "zkyL29HwWCbWJy": {
+      "type": "Paragraph",
+      "id": "zkyL29HwWCbWJy",
+      "parentId": "W7UXm-pzZY7KSu",
+      "text": "A non-profit organization dedicated to exploring ancient culture, exploring ancient civilizations, protecting ancient relics, and promoting knowledge exchange in the collection. We have extensive experience in the protection of collections, and we will also carry out exploration work!",
+      "textDirection": "LeftToRight"
+    },
+    "492hD2FW118BD8": {
+      "childrenIds": [
+        "Nkdx8jhLRu680G"
+      ],
+      "type": "Hierarchy",
+      "id": "492hD2FW118BD8",
+      "parentId": "children_bElukenJum5Vcb",
+      "hierarchyLevel": 1
+    },
+    "tWp0cxQezzQBXs": {
+      "type": "H1",
+      "id": "tWp0cxQezzQBXs",
+      "parentId": "492hD2FW118BD8",
+      "titleId": "text_sB76nGvBPfSusW"
+    },
+    "text_sB76nGvBPfSusW": {
+      "type": "Text",
+      "id": "text_sB76nGvBPfSusW",
+      "parentId": "tWp0cxQezzQBXs",
+      "textDirection": "None",
+      "textNodeType": "Default"
+    },
+    "sB76nGvBPfSusW": {
+      "type": "Paragraph",
+      "id": "sB76nGvBPfSusW",
+      "parentId": "text_sB76nGvBPfSusW",
+      "text": "Organize event",
+      "textDirection": "LeftToRight"
+    },
+    "children_492hD2FW118BD8": {
+      "type": "Placeholder",
+      "id": "children_492hD2FW118BD8",
+      "parentId": "492hD2FW118BD8",
+      "identifier": "Common:Set:1.2.36"
+    },
+    "Nkdx8jhLRu680G": {
+      "type": "Text",
+      "id": "Nkdx8jhLRu680G",
+      "parentId": "children_492hD2FW118BD8",
+      "textDirection": "LeftToRight",
+      "textNodeType": "Default"
+    },
+    "MigG0qolLVFuHI": {
+      "type": "Paragraph",
+      "id": "MigG0qolLVFuHI",
+      "parentId": "Nkdx8jhLRu680G",
+      "text": "We have accumulated a lot of relevant experience by inviting to participate in the Academic Symposium of the Ancient Egypt Pyramid and the study of Inca culture and history.",
+      "textDirection": "LeftToRight"
+    },
+    "fqkYkZPfJU5FOU": {
+      "childrenIds": [
+        "H0Hwcy0yycG87d",
+        "GQaamVSFAEPaJh"
+      ],
+      "type": "Hierarchy",
+      "id": "fqkYkZPfJU5FOU",
+      "parentId": "children_bElukenJum5Vcb",
+      "hierarchyLevel": 1
+    },
+    "TWvyenlx4vEnva": {
+      "type": "H1",
+      "id": "TWvyenlx4vEnva",
+      "parentId": "fqkYkZPfJU5FOU",
+      "titleId": "text_vc1gJIJtIKJFUe"
+    },
+    "text_vc1gJIJtIKJFUe": {
+      "type": "Text",
+      "id": "text_vc1gJIJtIKJFUe",
+      "parentId": "TWvyenlx4vEnva",
+      "textDirection": "None",
+      "textNodeType": "Default"
+    },
+    "vc1gJIJtIKJFUe": {
+      "type": "Paragraph",
+      "id": "vc1gJIJtIKJFUe",
+      "parentId": "text_vc1gJIJtIKJFUe",
+      "text": "Organization members",
+      "textDirection": "LeftToRight"
+    },
+    "children_fqkYkZPfJU5FOU": {
+      "type": "Placeholder",
+      "id": "children_fqkYkZPfJU5FOU",
+      "parentId": "fqkYkZPfJU5FOU",
+      "identifier": "Common:Set:1.2.36"
+    },
+    "res-ial_dMuaVe10qY": {
+      "type": "Image",
+      "id": "res-ial_dMuaVe10qY",
+      "sourceUrl": "https://sway.office.com/s/DeIyeMWD1QE4hwBg/images/res-ial_dMuaVe10qY",
+      "width": 3840.0,
+      "height": 2560.0,
+      "emphasis": "NoPreference",
+      "altText": "映像"
+    }
+  },
+  "layout": {
+    "type": "FlowBody",
+    "id": "bElukenJum5Vcb",
+    "contractRef": "bElukenJum5Vcb",
+    "normalizedSize": 1.0,
+    "styleRefs": [
+      "0"
+    ],
+    "decoratorRefs": [],
+    "flowScheme": "Vertical",
+    "oppositeDirection": false,
+    "children": [
+      {
+        "type": "DocumentHeading",
+        "id": "UT1xNafYM00vor",
+        "contractRef": "UT1xNafYM00vor",
+        "normalizedSize": 1.0,
+        "styleRefs": [
+          "100"
+        ],
+        "decoratorRefs": [
+          "100-TitleMask",
+          "100-OverflowBackground"
+        ],
+        "title": {
+          "type": "Text",
+          "id": "text_p6H1YxRHJQBDuP",
+          "contractRef": "text_p6H1YxRHJQBDuP",
+          "normalizedSize": 1.0,
+          "styleRefs": [
+            "108"
+          ],
+          "decoratorRefs": [
+            "108-Wrapper",
+            "108-TitleBar"
+          ],
+          "animSequenceRefs": [
+            "simplicityTitleTextDelay"
+          ],
+          "textListType": "Default",
+          "isPlaceholder": false,
+          "children": [
+            {
+              "type": "Paragraph",
+              "id": "p6H1YxRHJQBDuP",
+              "contractRef": "p6H1YxRHJQBDuP",
+              "normalizedSize": 1.0,
+              "styleRefs": [
+                "110"
+              ],
+              "decoratorRefs": [],
+              "widthInPixels": 787.5,
+              "useWrapperSpan": false,
+              "emphasisStyleRefs": [
+                "110-emphasis"
+              ],
+              "accentStyleRefs": [
+                "110-accent"
+              ]
+            }
+          ]
+        },
+        "background": {
+          "type": "BackgroundImage",
+          "id": "img.UT1xNafYM00vor",
+          "contractRef": "res-ial_dMuaVe10qY",
+          "normalizedSize": 1.0,
+          "styleRefs": [
+            "102"
+          ],
+          "decoratorRefs": [
+            "102-Vellum"
+          ],
+          "animSequenceRefs": [
+            "simplicityTitleImage"
+          ],
+          "cropInViewportSize": {
+            "width": 1.0,
+            "height": 0.9
+          }
+        }
+      },
+      {
+        "type": "FlowBody",
+        "id": "eert8_Sz585T4i",
+        "contractRef": "eert8_Sz585T4i",
+        "normalizedSize": 1.0,
+        "flowScheme": "Vertical",
+        "oppositeDirection": false,
+        "children": [
+          {
+            "type": "Image",
+            "id": "bxiB3byCv2pBDT",
+            "contractRef": "bxiB3byCv2pBDT",
+            "normalizedSize": 1.0,
+            "styleRefs": [
+              "613"
+            ],
+            "computedStyleRefs": [
+              "613"
+            ],
+            "decoratorRefs": [
+              "613-Wrapper"
+            ],
+            "animSequenceRefs": [
+              "imagePopIn"
+            ]
+          },
+          {
+            "type": "Text",
+            "id": "W7UXm-pzZY7KSu",
+            "contractRef": "W7UXm-pzZY7KSu",
+            "normalizedSize": 1.0,
+            "styleRefs": [
+              "400"
+            ],
+            "decoratorRefs": [],
+            "textListType": "Default",
+            "isPlaceholder": false,
+            "children": [
+              {
+                "type": "Paragraph",
+                "id": "zkyL29HwWCbWJy",
+                "contractRef": "zkyL29HwWCbWJy",
+                "normalizedSize": 1.0,
+                "styleRefs": [
+                  "401"
+                ],
+                "decoratorRefs": [],
+                "widthInPixels": 2565.0,
+                "useWrapperSpan": false,
+                "emphasisStyleRefs": [
+                  "401-emphasis"
+                ],
+                "accentStyleRefs": [
+                  "401-accent"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "FlowBody",
+        "id": "492hD2FW118BD8",
+        "contractRef": "492hD2FW118BD8",
+        "normalizedSize": 1.0,
+        "flowScheme": "Vertical",
+        "oppositeDirection": false,
+        "children": [
+          {
+            "type": "H1",
+            "id": "tWp0cxQezzQBXs",
+            "contractRef": "tWp0cxQezzQBXs",
+            "normalizedSize": 1.0,
+            "styleRefs": [
+              "201"
+            ],
+            "decoratorRefs": [
+              "201-HeadingMask"
+            ],
+            "title": {
+              "type": "Text",
+              "id": "text_sB76nGvBPfSusW",
+              "contractRef": "text_sB76nGvBPfSusW",
+              "normalizedSize": 1.0,
+              "styleRefs": [
+                "209"
+              ],
+              "decoratorRefs": [
+                "209-Wrapper",
+                "209-Ornament Wrapper",
+                "209-TitleBar"
+              ],
+              "animSequenceRefs": [
+                "simplicityHeadingText"
+              ],
+              "textListType": "Default",
+              "isPlaceholder": false,
+              "children": [
+                {
+                  "type": "Paragraph",
+                  "id": "sB76nGvBPfSusW",
+                  "contractRef": "sB76nGvBPfSusW",
+                  "normalizedSize": 1.0,
+                  "styleRefs": [
+                    "212"
+                  ],
+                  "decoratorRefs": [],
+                  "widthInPixels": 385.0,
+                  "useWrapperSpan": false,
+                  "emphasisStyleRefs": [
+                    "212-emphasis"
+                  ],
+                  "accentStyleRefs": [
+                    "212-accent"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "type": "Text",
+            "id": "Nkdx8jhLRu680G",
+            "contractRef": "Nkdx8jhLRu680G",
+            "normalizedSize": 1.0,
+            "styleRefs": [
+              "400"
+            ],
+            "decoratorRefs": [],
+            "textListType": "Default",
+            "isPlaceholder": false,
+            "children": [
+              {
+                "type": "Paragraph",
+                "id": "MigG0qolLVFuHI",
+                "contractRef": "MigG0qolLVFuHI",
+                "normalizedSize": 1.0,
+                "styleRefs": [
+                  "401"
+                ],
+                "decoratorRefs": [],
+                "widthInPixels": 1557.0,
+                "useWrapperSpan": false,
+                "emphasisStyleRefs": [
+                  "401-emphasis"
+                ],
+                "accentStyleRefs": [
+                  "401-accent"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "FlowBody",
+        "id": "fqkYkZPfJU5FOU",
+        "contractRef": "fqkYkZPfJU5FOU",
+        "normalizedSize": 1.0,
+        "flowScheme": "Vertical",
+        "oppositeDirection": false,
+        "children": [
+          {
+            "type": "H1",
+            "id": "TWvyenlx4vEnva",
+            "contractRef": "TWvyenlx4vEnva",
+            "normalizedSize": 1.0,
+            "styleRefs": [
+              "201"
+            ],
+            "decoratorRefs": [
+              "201-HeadingMask"
+            ],
+            "title": {
+              "type": "Text",
+              "id": "text_vc1gJIJtIKJFUe",
+              "contractRef": "text_vc1gJIJtIKJFUe",
+              "normalizedSize": 1.0,
+              "styleRefs": [
+                "209"
+              ],
+              "decoratorRefs": [
+                "209-Wrapper",
+                "209-Ornament Wrapper",
+                "209-TitleBar"
+              ],
+              "animSequenceRefs": [
+                "simplicityHeadingText"
+              ],
+              "textListType": "Default",
+              "isPlaceholder": false,
+              "children": [
+                {
+                  "type": "Paragraph",
+                  "id": "vc1gJIJtIKJFUe",
+                  "contractRef": "vc1gJIJtIKJFUe",
+                  "normalizedSize": 1.0,
+                  "styleRefs": [
+                    "212"
+                  ],
+                  "decoratorRefs": [],
+                  "widthInPixels": 550.0,
+                  "useWrapperSpan": false,
+                  "emphasisStyleRefs": [
+                    "212-emphasis"
+                  ],
+                  "accentStyleRefs": [
+                    "212-accent"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "type": "Unpopulated",
+            "id": "H0Hwcy0yycG87d",
+            "contractRef": "H0Hwcy0yycG87d",
+            "normalizedSize": 1.0,
+            "styleRefs": [
+              "2"
+            ],
+            "decoratorRefs": [],
+            "segmentIndex": 1,
+            "populatedType": "Text"
+          }
+        ]
+      }
+    ]
+  },
+  "styles": {
+    "0": {
+      "backgroundColor": "#ffffff",
+      "backgroundImage": "url(https://wus-www.sway-cdn.com/20151285202_Content/Background_Flower2_01.png)",
+      "backgroundPosition": "0px 0px",
+      "backgroundRepeat": "repeat",
+      "minHeight": "100vh",
+      "minWidth": "240px",
+      "overflow": "hidden",
+      "width": "100vw"
+    },
+    "100-TitleMask": {
+      "backgroundColor": "#ffffff",
+      "height": "0%",
+      "position": "absolute",
+      "width": "100%",
+      "zIndex": "1"
+    },
+    "100-OverflowBackground": {
+      "backgroundColor": "#000000",
+      "height": "100%",
+      "position": "absolute",
+      "width": "100%"
+    },
+    "100": {
+      "minHeight": "90vh",
+      "overflow": "hidden",
+      "position": "relative",
+      "width": "100vw"
+    },
+    "108-Wrapper": {
+      "@media (max-width: 712px)": {
+        "marginLeft": "calc(0.05 * 100vw)",
+        "marginRight": "calc(0.0500001 * 100vw)",
+        "width": "calc(0.9 * 100vw)"
+      },
+      "@media (max-width: 768px)": {
+        "marginBottom": "20px",
+        "marginTop": "60px"
+      },
+      "@media (min-width: 712px) and (max-width: 768px)": {
+        "marginLeft": "calc(0.5071428 * 100vw - 325.5px)",
+        "marginRight": "calc(0.278571 * 100vw - 162.7px)",
+        "width": "calc(0.2142868 * 100vw + 488.2px)"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "marginBottom": "calc(0.0195312 * 100vw + 5px)",
+        "marginLeft": "calc(0.2375 * 100vw - 144px)",
+        "marginRight": "calc(0.3020833 * 100vw - 168px)",
+        "marginTop": "calc(0.0585938 * 100vw + 15px)",
+        "width": "calc(0.4604167 * 100vw + 312px)"
+      },
+      "@media (min-width: 3840px)": {
+        "marginBottom": "80px",
+        "marginLeft": "calc(0.2 * 100vw)",
+        "marginRight": "calc(0.4249999 * 100vw - 640px)",
+        "marginTop": "240px",
+        "width": "calc(0.375 * 100vw + 640px)"
+      }
+    },
+    "108-TitleBar": {
+      "borderBottom": "8px solid #ffffff",
+      "height": "100%",
+      "position": "absolute",
+      "width": "120px",
+      "zIndex": "1"
+    },
+    "108": {
+      "fontFamily": "\u0022Benton Modern\u0022, serif",
+      "fontStretch": "normal",
+      "fontStyle": "normal",
+      "fontWeight": "400",
+      "paddingBottom": "5px",
+      "position": "relative",
+      "textAlign": "start",
+      "zIndex": "1",
+      "@media (max-width: 712px)": {
+        "width": "calc(0.9 * 100vw)"
+      },
+      "@media (max-width: 768px)": {
+        "fontSize": "49px"
+      },
+      "@media (min-width: 712px) and (max-width: 768px)": {
+        "width": "calc(-0.0142855 * 100vw + 651px)"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "fontSize": "calc(0.0159505 * 100vw + 36.8px)",
+        "width": "calc(0.4604167 * 100vw + 312px)"
+      },
+      "@media (min-width: 3840px)": {
+        "fontSize": "98px",
+        "width": "calc(0.375 * 100vw + 640px)"
+      }
+    },
+    "110": {
+      "color": "#ffffff",
+      "fontFamily": "\u0022Benton Modern\u0022, serif",
+      "fontStretch": "normal",
+      "fontStyle": "normal",
+      "fontWeight": "400",
+      "marginBottom": "0",
+      "marginTop": "0",
+      "textShadow": "0px 0px 5px rgba(0,0,0,0.15)",
+      "@media (max-width: 768px)": {
+        "fontSize": "49px"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "fontSize": "calc(0.0159505 * 100vw + 36.8px)"
+      },
+      "@media (min-width: 3840px)": {
+        "fontSize": "98px"
+      }
+    },
+    "110-emphasis": {
+      "color": "#e4e6db",
+      "fontWeight": "700"
+    },
+    "110-accent": {
+      "fontStyle": "italic"
+    },
+    "102-Vellum": {
+      "backgroundColor": "rgba(0,0,0,0.2)",
+      "height": "100%",
+      "left": "0",
+      "position": "absolute",
+      "top": "0",
+      "width": "100%",
+      "zIndex": "1"
+    },
+    "102": {
+      "backgroundPosition": "center",
+      "backgroundSize": "cover",
+      "height": "90vh",
+      "overflow": "hidden",
+      "position": "relative",
+      "width": "100vw"
+    },
+    "613-Wrapper": {
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "@media (max-width: 712px)": {
+        "width": "calc(0.9 * 100vw)"
+      },
+      "@media (max-width: 768px)": {
+        "marginBottom": "40px",
+        "marginTop": "40px"
+      },
+      "@media (min-width: 712px) and (max-width: 768px)": {
+        "width": "calc(-0.0142855 * 100vw + 651px)"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "marginBottom": "calc(0.0390625 * 100vw + 10px)",
+        "marginLeft": "calc(0.2375 * 100vw - 144px)",
+        "marginRight": "calc(0.3020833 * 100vw - 168px)",
+        "marginTop": "calc(0.0390625 * 100vw + 10px)",
+        "width": "calc(0.4604167 * 100vw + 312px)"
+      },
+      "@media (min-width: 3840px)": {
+        "marginBottom": "160px",
+        "marginLeft": "calc(0.2 * 100vw)",
+        "marginRight": "calc(0.4249999 * 100vw - 640px)",
+        "marginTop": "160px",
+        "width": "calc(0.375 * 100vw + 640px)"
+      }
+    },
+    "613": {
+      "@media (max-width: 712px)": {
+        "maxHeight": "calc(18 * 100vw)",
+        "maxWidth": "calc(0.9 * 100vw)"
+      },
+      "@media (max-width: 768px)": {
+        "marginLeft": "auto",
+        "marginRight": "auto"
+      },
+      "@media (min-width: 712px) and (max-width: 768px)": {
+        "maxHeight": "calc(-0.2857143 * 100vw + 13019.4px)",
+        "maxWidth": "calc(-0.0142855 * 100vw + 651px)"
+      },
+      "@media (min-width: 768px)": {},
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "maxHeight": "calc(9.208333 * 100vw + 6240px)",
+        "maxWidth": "calc(0.4604167 * 100vw + 312px)"
+      },
+      "@media (min-width: 3840px)": {
+        "maxHeight": "calc(7.5000005 * 100vw + 12800px)",
+        "maxWidth": "calc(0.375 * 100vw + 640px)"
+      }
+    },
+    "400": {
+      "color": "#000000",
+      "fontFamily": "\u0022Benton Modern\u0022, serif",
+      "fontStretch": "normal",
+      "fontStyle": "normal",
+      "fontWeight": "400",
+      "textAlign": "start",
+      "@media (max-width: 712px)": {
+        "marginLeft": "calc(0.05 * 100vw)",
+        "marginRight": "calc(0.0500001 * 100vw)",
+        "width": "calc(0.9 * 100vw)"
+      },
+      "@media (max-width: 768px)": {
+        "fontSize": "16px",
+        "marginBottom": "20px",
+        "marginTop": "20px"
+      },
+      "@media (min-width: 712px) and (max-width: 768px)": {
+        "marginLeft": "calc(0.5071428 * 100vw - 325.5px)",
+        "marginRight": "calc(0.5071433 * 100vw - 325.5px)",
+        "width": "calc(-0.0142855 * 100vw + 651px)"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "fontSize": "calc(0.0052083 * 100vw + 12px)",
+        "marginBottom": "calc(0.0195312 * 100vw + 5px)",
+        "marginLeft": "calc(0.2375 * 100vw - 144px)",
+        "marginRight": "calc(0.5541667 * 100vw - 336px)",
+        "marginTop": "calc(0.0195312 * 100vw + 5px)",
+        "width": "calc(0.2083333 * 100vw + 480px)"
+      },
+      "@media (min-width: 3840px)": {
+        "fontSize": "32px",
+        "marginBottom": "80px",
+        "marginLeft": "calc(0.2 * 100vw)",
+        "marginRight": "calc(0.8 * 100vw - 1280px)",
+        "marginTop": "80px",
+        "width": "1280px"
+      }
+    },
+    "401": {
+      "color": "#000000",
+      "fontFamily": "\u0022Benton Modern\u0022, serif",
+      "fontStretch": "normal",
+      "fontStyle": "normal",
+      "fontWeight": "400",
+      "lineHeight": "1.6",
+      "minHeight": "1.6",
+      "@media (max-width: 768px)": {
+        "fontSize": "16px"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "fontSize": "calc(0.0052083 * 100vw + 12px)"
+      },
+      "@media (min-width: 3840px)": {
+        "fontSize": "32px"
+      }
+    },
+    "401-emphasis": {
+      "fontWeight": "700"
+    },
+    "401-accent": {
+      "fontStyle": "italic"
+    },
+    "201-HeadingMask": {
+      "backgroundColor": "#ffffff",
+      "height": "0%",
+      "position": "absolute",
+      "width": "100%",
+      "zIndex": "1"
+    },
+    "201": {
+      "backgroundColor": "#7e8078",
+      "marginBottom": "0",
+      "marginTop": "0",
+      "minHeight": "40vh",
+      "overflow": "hidden",
+      "position": "relative",
+      "width": "100vw"
+    },
+    "209-Wrapper": {
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+      "minHeight": "40vh",
+      "@media (max-width: 712px)": {
+        "marginLeft": "calc(0.05 * 100vw)",
+        "marginRight": "calc(0.0500001 * 100vw)",
+        "width": "calc(0.9 * 100vw)"
+      },
+      "@media (min-width: 712px) and (max-width: 768px)": {
+        "marginLeft": "calc(0.5071428 * 100vw - 325.5px)",
+        "marginRight": "calc(0.278571 * 100vw - 162.7px)",
+        "width": "calc(0.2142868 * 100vw + 488.2px)"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "marginLeft": "calc(0.2375 * 100vw - 144px)",
+        "marginRight": "calc(0.3020833 * 100vw - 168px)",
+        "width": "calc(0.4604167 * 100vw + 312px)"
+      },
+      "@media (min-width: 3840px)": {
+        "marginLeft": "calc(0.2 * 100vw)",
+        "marginRight": "calc(0.4249999 * 100vw - 640px)",
+        "width": "calc(0.375 * 100vw + 640px)"
+      }
+    },
+    "209-Ornament Wrapper": {
+      "@media (max-width: 768px)": {
+        "marginBottom": "20px",
+        "marginTop": "20px"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "marginBottom": "calc(0.0195312 * 100vw + 5px)",
+        "marginTop": "calc(0.0195312 * 100vw + 5px)"
+      },
+      "@media (min-width: 3840px)": {
+        "marginBottom": "80px",
+        "marginTop": "80px"
+      }
+    },
+    "209-TitleBar": {
+      "borderTop": "8px solid #ffffff",
+      "height": "0",
+      "position": "absolute",
+      "width": "40px",
+      "zIndex": "1"
+    },
+    "209": {
+      "fontFamily": "\u0022Benton Modern\u0022, serif",
+      "fontStretch": "normal",
+      "fontStyle": "normal",
+      "fontWeight": "400",
+      "paddingTop": "20px",
+      "textAlign": "start",
+      "@media (max-width: 712px)": {
+        "width": "calc(0.9 * 100vw)"
+      },
+      "@media (max-width: 768px)": {
+        "fontSize": "42px"
+      },
+      "@media (min-width: 712px) and (max-width: 768px)": {
+        "width": "calc(-0.0142855 * 100vw + 651px)"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "fontSize": "calc(0.0136719 * 100vw + 31.5px)",
+        "width": "calc(0.4604167 * 100vw + 312px)"
+      },
+      "@media (min-width: 3840px)": {
+        "fontSize": "84px",
+        "width": "calc(0.375 * 100vw + 640px)"
+      }
+    },
+    "212": {
+      "color": "#ffffff",
+      "fontFamily": "\u0022Benton Modern\u0022, serif",
+      "fontStretch": "normal",
+      "fontStyle": "normal",
+      "fontWeight": "400",
+      "marginBottom": "0",
+      "marginTop": "0",
+      "@media (max-width: 768px)": {
+        "fontSize": "42px"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "fontSize": "calc(0.0136719 * 100vw + 31.5px)"
+      },
+      "@media (min-width: 3840px)": {
+        "fontSize": "84px"
+      }
+    },
+    "212-emphasis": {
+      "color": "#e4e6db",
+      "fontWeight": "700"
+    },
+    "212-accent": {
+      "fontStyle": "italic"
+    },
+    "2": {
+      "@media (max-width: 712px)": {
+        "marginLeft": "calc(0.05 * 100vw)",
+        "marginRight": "calc(0.0500001 * 100vw)",
+        "width": "calc(0.9 * 100vw)"
+      },
+      "@media (min-width: 712px) and (max-width: 768px)": {
+        "marginLeft": "calc(0.5071428 * 100vw - 325.5px)",
+        "marginRight": "calc(0.5071433 * 100vw - 325.5px)",
+        "width": "calc(-0.0142855 * 100vw + 651px)"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "marginLeft": "calc(0.2375 * 100vw - 144px)",
+        "marginRight": "calc(0.5541667 * 100vw - 336px)",
+        "width": "calc(0.2083333 * 100vw + 480px)"
+      },
+      "@media (min-width: 3840px)": {
+        "marginLeft": "calc(0.2 * 100vw)",
+        "marginRight": "calc(0.8 * 100vw - 1280px)",
+        "width": "1280px"
+      }
+    }
+  },
+  "computedStyles": {
+    "613": {
+      "@media (max-width: 712px)": {
+        "height": "calc((0.9 * 100vw) / $aspectRatio$)",
+        "width": "calc((18 * 100vw) * $aspectRatio$)"
+      },
+      "@media (min-width: 712px) and (max-width: 768px)": {
+        "height": "calc((-0.0142855 * 100vw + 651px) / $aspectRatio$)",
+        "width": "calc((-0.2857143 * 100vw + 13019.4px) * $aspectRatio$)"
+      },
+      "@media (min-width: 768px) and (max-width: 3840px)": {
+        "height": "calc((0.4604167 * 100vw + 312px) / $aspectRatio$)",
+        "width": "calc((9.208333 * 100vw + 6240px) * $aspectRatio$)"
+      },
+      "@media (min-width: 3840px)": {
+        "height": "calc((0.375 * 100vw + 640px) / $aspectRatio$)",
+        "width": "calc((7.5000005 * 100vw + 12800px) * $aspectRatio$)"
+      }
+    }
+  },
+  "decorators": {
+    "100-TitleMask": {
+      "type": "Ornament",
+      "id": "100-TitleMask",
+      "contractRef": "100-TitleMask",
+      "normalizedSize": 1.0,
+      "styleRefs": [
+        "100-TitleMask"
+      ],
+      "decoratorRefs": [],
+      "animSequenceRefs": [
+        "simplicityTitleMaskSeq"
+      ],
+      "position": "relative",
+      "child": {
+        "type": "DecoratorLeaf"
+      }
+    },
+    "100-OverflowBackground": {
+      "type": "Ornament",
+      "id": "100-OverflowBackground",
+      "contractRef": "100-OverflowBackground",
+      "normalizedSize": 1.0,
+      "styleRefs": [
+        "100-OverflowBackground"
+      ],
+      "decoratorRefs": [],
+      "position": "relative",
+      "child": {
+        "type": "DecoratorLeaf"
+      }
+    },
+    "108-Wrapper": {
+      "type": "Border",
+      "id": "108-Wrapper",
+      "contractRef": "108-Wrapper",
+      "normalizedSize": 1.0,
+      "styleRefs": [
+        "108-Wrapper"
+      ],
+      "decoratorRefs": [],
+      "borderStyle": "borderStyle1",
+      "child": {
+        "type": "DecoratorLeaf"
+      }
+    },
+    "108-TitleBar": {
+      "type": "Ornament",
+      "id": "108-TitleBar",
+      "contractRef": "108-TitleBar",
+      "normalizedSize": 1.0,
+      "styleRefs": [
+        "108-TitleBar"
+      ],
+      "decoratorRefs": [],
+      "animSequenceRefs": [
+        "simplicityTitleLineDelay"
+      ],
+      "position": "relative",
+      "child": {
+        "type": "DecoratorLeaf"
+      }
+    },
+    "102-Vellum": {
+      "type": "Ornament",
+      "id": "102-Vellum",
+      "contractRef": "102-Vellum",
+      "normalizedSize": 1.0,
+      "styleRefs": [
+        "102-Vellum"
+      ],
+      "decoratorRefs": [],
+      "animSequenceRefs": [
+        "simplicityTitleLegibility"
+      ],
+      "position": "absolute",
+      "child": {
+        "type": "DecoratorLeaf"
+      }
+    },
+    "613-Wrapper": {
+      "type": "Border",
+      "id": "613-Wrapper",
+      "contractRef": "613-Wrapper",
+      "normalizedSize": 1.0,
+      "styleRefs": [
+        "613-Wrapper"
+      ],
+      "decoratorRefs": [],
+      "borderStyle": "borderStyle1",
+      "child": {
+        "type": "DecoratorLeaf"
+      }
+    },
+    "201-HeadingMask": {
+      "type": "Ornament",
+      "id": "201-HeadingMask",
+      "contractRef": "201-HeadingMask",
+      "normalizedSize": 1.0,
+      "styleRefs": [
+        "201-HeadingMask"
+      ],
+      "decoratorRefs": [],
+      "animSequenceRefs": [
+        "simplicityHeadingMaskSeq"
+      ],
+      "position": "relative",
+      "child": {
+        "type": "DecoratorLeaf"
+      }
+    },
+    "209-Wrapper": {
+      "type": "Border",
+      "id": "209-Wrapper",
+      "contractRef": "209-Wrapper",
+      "normalizedSize": 1.0,
+      "styleRefs": [
+        "209-Wrapper"
+      ],
+      "decoratorRefs": [],
+      "borderStyle": "borderStyle1",
+      "child": {
+        "type": "DecoratorLeaf"
+      }
+    },
+    "209-Ornament Wrapper": {
+      "type": "Border",
+      "id": "209-Ornament Wrapper",
+      "contractRef": "209-Ornament Wrapper",
+      "normalizedSize": 1.0,
+      "styleRefs": [
+        "209-Ornament Wrapper"
+      ],
+      "decoratorRefs": [],
+      "borderStyle": "borderStyle1",
+      "child": {
+        "type": "DecoratorLeaf"
+      }
+    },
+    "209-TitleBar": {
+      "type": "Ornament",
+      "id": "209-TitleBar",
+      "contractRef": "209-TitleBar",
+      "normalizedSize": 1.0,
+      "styleRefs": [
+        "209-TitleBar"
+      ],
+      "decoratorRefs": [],
+      "animSequenceRefs": [
+        "simplicityHeadingLine"
+      ],
+      "position": "relative",
+      "child": {
+        "type": "DecoratorLeaf"
+      }
+    }
+  },
+  "animations": [
+    {
+      "id": "simplicityTitleMask",
+      "type": "Keyframe",
+      "definition": "1.017s cubic-bezier(0.1, 0.9, 0.2, 1) forwards",
+      "keyframes": {
+        "0%": {
+          "height": "100%"
+        },
+        "100%": {
+          "height": "0%"
+        }
+      }
+    },
+    {
+      "id": "simplicityTitleLineTraverseDelay",
+      "type": "Keyframe",
+      "definition": "0.283s 0.817s cubic-bezier(0.45, 0, 0.508, 1) both",
+      "keyframes": {
+        "0%": {
+          "transform-origin": "0% 0%",
+          "transform": "translate(177px) scale(0.25,1)"
+        },
+        "100%": {
+          "transform-origin": "0% 0%",
+          "transform": "translate(0px) scale(0.25,1)"
+        }
+      }
+    },
+    {
+      "id": "simplicityTitleLineFadeDelay",
+      "type": "Keyframe",
+      "definition": "0.283s 0.817s cubic-bezier(0.33, 0, 0.67, 1) backwards",
+      "keyframes": {
+        "0%": {
+          "opacity": "0"
+        },
+        "100%": {
+          "opacity": "1"
+        }
+      }
+    },
+    {
+      "id": "simplicityTitleLineGrowDelay",
+      "type": "Keyframe",
+      "definition": "0.183s 1.117s cubic-bezier(0.682, 0, 0.6, 1) forwards",
+      "keyframes": {
+        "0%": {
+          "transform-origin": "0% 0%",
+          "transform": "scale(0.25,1)"
+        },
+        "100%": {
+          "transform-origin": "0% 0%",
+          "transform": "scale(1,1)"
+        }
+      }
+    },
+    {
+      "id": "simplicityTitleTextTranslateDelay",
+      "type": "Keyframe",
+      "definition": "1s 0.233s cubic-bezier(0.1, 0.9, 0.2, 1) backwards",
+      "keyframes": {
+        "0%": {
+          "transform": "translateX(-300.1px)"
+        },
+        "100%": {
+          "transform": "translateX(0px)"
+        }
+      }
+    },
+    {
+      "id": "simplicityTitleTextFadeDelay",
+      "type": "Keyframe",
+      "definition": "1s 0.333s cubic-bezier(0.33, 0, 0.67, 1) backwards",
+      "keyframes": {
+        "0%": {
+          "opacity": "0"
+        },
+        "100%": {
+          "opacity": "1"
+        }
+      }
+    },
+    {
+      "id": "simplicityTitleLegibilityFade",
+      "type": "Keyframe",
+      "definition": "1s 1.133s cubic-bezier(0.33, 0, 0.67, 1) backwards",
+      "keyframes": {
+        "0%": {
+          "opacity": "0"
+        },
+        "100%": {
+          "opacity": "1"
+        }
+      }
+    },
+    {
+      "id": "simplicityTitleImageScale",
+      "type": "Keyframe",
+      "definition": "1.017s cubic-bezier(0.1, 0.9, 0.2, 1) forwards",
+      "keyframes": {
+        "0%": {
+          "transform": "translateY(33%) scale(1.497) rotate(0.001deg)"
+        },
+        "100%": {
+          "transform": "translateY(16px) scale(1.046) rotate(0.001deg)"
+        }
+      }
+    },
+    {
+      "id": "simplicityTitleImageKenBurns",
+      "type": "Keyframe",
+      "definition": "10s 1.017s ease-out forwards",
+      "keyframes": {
+        "0%": {
+          "transform": "translateY(16px) scale(1.046) rotate(0.001deg)"
+        },
+        "100%": {
+          "transform": "translateY(0px) scale(1) rotate(0deg)"
+        }
+      }
+    },
+    {
+      "id": "popIn",
+      "type": "Keyframe",
+      "definition": "0.85s cubic-bezier(0.075, 0.82, 0.37, 1)",
+      "keyframes": {
+        "from": {
+          "transform": "scale(0.68,0.68)"
+        },
+        "to": {
+          "transform": "scale(1,1)"
+        }
+      }
+    },
+    {
+      "id": "fade",
+      "type": "Keyframe",
+      "definition": "0.3s cubic-bezier(0.071, 0.045, 0.33, 1)",
+      "keyframes": {
+        "from": {
+          "opacity": "0"
+        },
+        "to": {
+          "opacity": "1"
+        }
+      }
+    },
+    {
+      "id": "simplicityHeadingMask",
+      "type": "Keyframe",
+      "definition": "1.333s cubic-bezier(0.1, 0.9, 0.2, 1) forwards",
+      "keyframes": {
+        "0%": {
+          "height": "100%"
+        },
+        "100%": {
+          "height": "0%"
+        }
+      }
+    },
+    {
+      "id": "simplicityHeadingLineTraverse",
+      "type": "Keyframe",
+      "definition": "0.283s 0.717s cubic-bezier(0.451, 0, 0.508, 1) both",
+      "keyframes": {
+        "0%": {
+          "transform-origin": "0% 0%",
+          "transform": "translate(102px) scale(0.35,1)"
+        },
+        "100%": {
+          "transform-origin": "0% 0%",
+          "transform": "translate(0px) scale(0.35,1)"
+        }
+      }
+    },
+    {
+      "id": "simplicityHeadingLineFade",
+      "type": "Keyframe",
+      "definition": "0.283s 0.717s cubic-bezier(0.33, 0, 0.67, 1) backwards",
+      "keyframes": {
+        "0%": {
+          "opacity": "0"
+        },
+        "100%": {
+          "opacity": "1"
+        }
+      }
+    },
+    {
+      "id": "simplicityHeadingLineGrow",
+      "type": "Keyframe",
+      "definition": "0.183s 1.017s cubic-bezier(0.682, 0, 0.6, 1) forwards",
+      "keyframes": {
+        "0%": {
+          "transform-origin": "0% 0%",
+          "transform": "scale(0.35,1)"
+        },
+        "100%": {
+          "transform-origin": "0% 0%",
+          "transform": "scale(1,1)"
+        }
+      }
+    },
+    {
+      "id": "simplicityHeadingTextTranslate",
+      "type": "Keyframe",
+      "definition": "1s 0.133s cubic-bezier(0.1, 0.9, 0.2, 1) backwards",
+      "keyframes": {
+        "0%": {
+          "transform": "translateX(-225px)"
+        },
+        "100%": {
+          "transform": "translateX(0px)"
+        }
+      }
+    },
+    {
+      "id": "simplicityHeadingTextFade",
+      "type": "Keyframe",
+      "definition": "1s 0.233s cubic-bezier(0.33, 0, 0.67, 1) backwards",
+      "keyframes": {
+        "0%": {
+          "opacity": "0"
+        },
+        "100%": {
+          "opacity": "1"
+        }
+      }
+    }
+  ],
+  "fontFiles": [
+    {
+      "fileName": "Benton_Modern-Roman_WebTT.woff",
+      "family": "Benton Modern",
+      "weight": "400",
+      "style": "normal",
+      "stretch": "normal"
+    }
+  ],
+  "animationSequences": [
+    {
+      "id": "simplicityTitleMaskSeq",
+      "replay": false,
+      "animations": [
+        {
+          "animationId": "simplicityTitleMask",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "Enter",
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "simplicityTitleLineDelay",
+      "replay": false,
+      "animations": [
+        {
+          "animationId": "simplicityTitleLineTraverseDelay",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "Enter",
+            "delay": 0.817
+          }
+        },
+        {
+          "animationId": "simplicityTitleLineFadeDelay",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "WithPrevious",
+            "delay": 0.0
+          }
+        },
+        {
+          "animationId": "simplicityTitleLineGrowDelay",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "EndOfPrevious",
+            "delay": 0.017
+          }
+        }
+      ]
+    },
+    {
+      "id": "simplicityTitleTextDelay",
+      "replay": false,
+      "animations": [
+        {
+          "animationId": "simplicityTitleTextTranslateDelay",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "Enter",
+            "delay": 0.233
+          }
+        },
+        {
+          "animationId": "simplicityTitleTextFadeDelay",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "WithPrevious",
+            "delay": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "id": "simplicityTitleLegibility",
+      "replay": false,
+      "animations": [
+        {
+          "animationId": "simplicityTitleLegibilityFade",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "Enter",
+            "delay": 1.133
+          }
+        }
+      ]
+    },
+    {
+      "id": "simplicityTitleImage",
+      "replay": false,
+      "animations": [
+        {
+          "animationId": "simplicityTitleImageScale",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "Enter",
+            "delay": 0.0
+          }
+        },
+        {
+          "animationId": "simplicityTitleImageKenBurns",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "EndOfPrevious",
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "imagePopIn",
+      "replay": false,
+      "animations": [
+        {
+          "animationId": "popIn",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "Enter",
+            "delay": 0.0
+          }
+        },
+        {
+          "animationId": "fade",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "WithPrevious",
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "simplicityHeadingMaskSeq",
+      "replay": false,
+      "animations": [
+        {
+          "animationId": "simplicityHeadingMask",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "Enter",
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "simplicityHeadingLine",
+      "replay": false,
+      "animations": [
+        {
+          "animationId": "simplicityHeadingLineTraverse",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "Enter",
+            "delay": 0.717
+          }
+        },
+        {
+          "animationId": "simplicityHeadingLineFade",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "WithPrevious",
+            "delay": 0.0
+          }
+        },
+        {
+          "animationId": "simplicityHeadingLineGrow",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "EndOfPrevious",
+            "delay": 0.017
+          }
+        }
+      ]
+    },
+    {
+      "id": "simplicityHeadingText",
+      "replay": false,
+      "animations": [
+        {
+          "animationId": "simplicityHeadingTextTranslate",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "Enter",
+            "delay": 0.133
+          }
+        },
+        {
+          "animationId": "simplicityHeadingTextFade",
+          "element": "Self",
+          "trigger": {
+            "triggerType": "WithPrevious",
+            "delay": 0.1
+          }
+        }
+      ]
+    }
+  ]
+}}
+	</script><script>__webClientScriptPath="https://wus-www.sway-cdn.com/20151285202_Content/webclient/js/zh-CN/";</script><script>if(performance&&performance.mark)performance.mark("MeasureParseTime::before::static/js/splitMain-prod.js");</script><script src=https://wus-www.sway-cdn.com/20151285202_Content/webclient/js/zh-CN/splitMain-prod.js crossorigin></script><script>if(performance&&performance.mark)performance.mark("MeasureParseTime::before::static/js/vendors~main.chunk.js");</script><script src=https://wus-www.sway-cdn.com/20151285202_Content/webclient/js/zh-CN/vendors~main.chunk.js crossorigin></script><script>if(performance&&performance.mark)performance.mark("MeasureParseTime::before::static/js/main.chunk.js");</script><script src=https://wus-www.sway-cdn.com/20151285202_Content/webclient/js/zh-CN/main.chunk.js crossorigin></script>
